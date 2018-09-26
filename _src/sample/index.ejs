@@ -10,6 +10,33 @@ var pageId = "sample";
 <%- include(setLayered + "base/head", { pageId: pageId }) %>
 <body>
 
+<div class="slider">
+  <div><img title="サンプルのキャプション1" src="https://ginzamag.com/wp-content/uploads/2018/09/e65e02afd7415a7a3d4127dfba6e0145.jpg" alt="" width="100%" height=""></div>
+  <div><img title="サンプルのキャプション1" src="https://ginzamag.com/wp-content/uploads/2018/09/9277ac0a164146ab6435ef4a295d0a41.jpg" alt="" width="100%" height=""></div>
+  <div><img title="サンプルのキャプション1" src="https://ginzamag.com/wp-content/uploads/2018/09/e65e02afd7415a7a3d4127dfba6e0145.jpg" alt="" width="100%" height=""></div>
+  <div><img title="サンプルのキャプション1" src="https://ginzamag.com/wp-content/uploads/2018/09/9277ac0a164146ab6435ef4a295d0a41.jpg" alt="" width="100%" height=""></div>
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/common/js/jquery.bxslider.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.slider').bxSlider({
+	    mode: "horizontal",
+	    auto: true,
+	    speed: "500",
+	    pause: "3000",
+	    infiniteLoop: true,
+	    captions: true,
+	    responsive: true,
+	    touchEnabled: true,
+	    pager: true,
+	    controls: true,
+	    nextText: "次へ",
+	    prevText: "前へ",
+	    easing: "ease"
+    });
+  });
+</script>
 </body>
 </html>
