@@ -1,0 +1,8 @@
+# 以下ははgit管理しない
+_view/
+node_modules/
+**/*.jpg
+**/*.png
+**/*.gif
+**/*.svg
+**/*.ico
