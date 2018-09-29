@@ -32,7 +32,9 @@ _wp/app/public/wp-content/index.php
 _wp/app/public/wp-content/languages
 _wp/app/public/wp-content/upgrade
 _wp/app/public/wp-content/uploads
+_wp/app/public/wp-content/plugins
 _wp/app/public/wp-content/themes/index.php
 _wp/app/public/wp-content/themes/twentyfifteen
 _wp/app/public/wp-content/themes/twentyseventeen
 _wp/app/public/wp-content/themes/twentysixteen
+_wp/app/sql

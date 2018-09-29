@@ -599,3 +599,6 @@ function remove_recent_comments_style() {
     remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
 }
 add_action( 'widgets_init', 'remove_recent_comments_style' );
+
+// アイキャッチ画像を有効にする。
+add_theme_support('post-thumbnails');
