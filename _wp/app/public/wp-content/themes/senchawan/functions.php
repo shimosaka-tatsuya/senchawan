@@ -602,3 +602,13 @@ add_action( 'widgets_init', 'remove_recent_comments_style' );
 
 // アイキャッチ画像を有効にする。
 add_theme_support('post-thumbnails');
+
+// ナビゲーション（ページネーション）の見出しを削除
+function archive_navi_template($template){
+	$template = '
+	<nav class="navigation %1$s" role="navigation">
+		<div class="nav-links">%3$s</div>
+	</nav>';
+	return $template;
+}
+add_action( 'navigation_markup_template', 'archive_navi_template' );
