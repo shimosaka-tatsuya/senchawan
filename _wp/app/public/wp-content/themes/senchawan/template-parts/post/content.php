@@ -53,8 +53,11 @@ while ($my_query->have_posts()) { $my_query->the_post();
 	<li class="box-otherColumn">
 		<a href="<?php the_permalink(); ?>">
 			<img class="img-mainVisual" src="<?php $eye_img = wp_get_attachment_image_src( get_post_thumbnail_id() , 'thumbnail' ); print_r($eye_img[0]); ?>" alt="『<?php the_title(); ?>』のサムネイル / thumbnail of '<?php the_field('ttlColumnEnglish'); ?>'" width="100%" height="">
-			<p class="ttl-otherColumn"><?php the_title(); ?></p>
+			<p class="txt-otherColumnCategory"><?php echo get_cat_name(get_the_category()[0]->term_id); ?></p>
+			<p class="ttl-otherColumn-english"><?php the_field('ttlColumnEnglish'); ?></p>
+			<p class="ttl-otherColumn-japanese"><?php the_title(); ?></p>
 		</a>
+		<p class="txt-otherColumnDate"><?php the_time('Y.m.d'); ?></p>
 	</li><!-- /.box-otherColumn -->
 <?php } wp_reset_query();
 } else { ?>
