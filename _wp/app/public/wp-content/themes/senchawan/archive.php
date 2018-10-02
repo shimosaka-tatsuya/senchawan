@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<h1 class="ttl-listName"><?php echo get_cat_name(get_the_category()[0]->term_id); ?>の一覧</h1>
+<h1 class="ttl-listName"><?php single_tag_title( ); ?>の一覧</h1>
 
 <?php if ( have_posts() ) : ?>
 <ul>
