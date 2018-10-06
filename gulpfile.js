@@ -55,7 +55,7 @@ gulp.task('build-js', function() {
 
 // htmlに関するタスク
 gulp.task('build-html', function(){
-	var buildView = gulp.src(['./_src/**/*.ejs', '!./_src/_**/*.ejs'])
+	var buildView = gulp.src(['./_src/**/*.ejs', '!./_src/_**/*.ejs', '!./template/_**/*.ejs'])
 	.pipe(data(file => {
 	return {
 		filename: file.path,

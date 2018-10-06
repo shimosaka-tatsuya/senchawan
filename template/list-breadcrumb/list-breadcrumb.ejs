@@ -1,0 +1,9 @@
+<ul class="list-breadcrumb">
+<% for (var key in listBreadcrumb) { %>
+	<% if( key == listBreadcrumb.length - 1 ){ %>
+	<li class="box-breadcrumb"><span class="txt-breadcrumb txt-breadcrumb-inactive"><%= listBreadcrumb[key].txtBreadcrumb %></span></li>
+	<% } else if( key !== listBreadcrumb.length - 1 ){ %>
+	<li class="box-breadcrumb"><a class="txt-breadcrumb" href="<%= listBreadcrumb[key].linkBreadcrumb %>"><%= listBreadcrumb[key].txtBreadcrumb %></a></li>
+	<% } %>
+<% } %>
+</ul><!-- /.list-breadcrumb -->

@@ -1,0 +1,71 @@
+<%
+/* 相対パスを取得 */
+var setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("/").length - 1)+"template/";
+
+/* ページID */
+var pageId = "column-all";
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<% /* ヘッド（titleやdiscriptionやogなど） */ %>
+<%- include(setLayered + "base/head", { pageId: pageId }) %>
+<body class="pageId">
+
+<% /* ヘッダー */ %>
+<%- include(setLayered + "base/header") %>
+
+<% /* パンくず */ %>
+<%- include(setLayered + "list-breadcrumb/list-breadcrumb", {
+	listBreadcrumb: [
+		{
+			txtBreadcrumb: 'top',
+			linkBreadcrumb: 'link-top'	
+		},
+		{
+			txtBreadcrumb: 'column',
+			linkBreadcrumb: 'link-column'	
+		}
+	]
+}) %>
+
+<% /* 各ページ／見出し */ %>
+<%- include(setLayered + "ttl-pageHead/ttl-pageHead", {
+	ttlPageHead: "コラム一覧"
+}) %>
+
+<% /* コラム一覧／カテゴリーナビゲーション */ %>
+<%- include(setLayered + "nav-category/nav-category", {
+	pageId: pageId,
+	navCategory: [
+		{
+			txtCategory: "全記事",
+			linkCategory: "category-all"		
+		},
+		{
+			txtCategory: "カルチャー",
+			linkCategory: "category-culture"		
+		},
+		{
+			txtCategory: "ニュース",
+			linkCategory: "category-news"		
+		},
+		{
+			txtCategory: "プロダクト",
+			linkCategory: "category-product"		
+		}
+	]
+}) %>
+
+<% /* コラム一覧 */ %>
+<%- include(setLayered + "list-column/list-column", {
+	loopNum: 12
+}) %>
+
+<% /* コラム一覧／ページネーション */ %>
+<%- include(setLayered + "nav-pagenation/nav-pagenation") %>
+
+<% /* フッター */ %>
+<%- include(setLayered + "base/footer") %>
+
+</body>
+</html>

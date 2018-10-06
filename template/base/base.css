@@ -4,16 +4,16 @@ body {
 	font-family:"メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3",Osaka,"ＭＳ Ｐゴシック",sans-serif;
 	color: #333;
 	font-size: 16px;
-	
-	.txt-fontAlphabet {
-		font-family: 'Josefin Sans', sans-serif;
-	}
-	
-	.txt-fontAlphabetSub {
-		font-family: 'Meddon', cursive;
-	}
-	
-	.txt-fontJapanese {
-		font-family: 'Noto Sans JP', sans-serif;
-	}
+}
+
+#hamburgerMenuInput {
+	display: none;
+}
+
+.box-hamburgerMenu {
+	display: none;
+}
+
+#hamburgerMenuInput:checked ~ .box-hamburgerMenu {
+	display: block;
 }

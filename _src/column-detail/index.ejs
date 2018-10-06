@@ -1,0 +1,95 @@
+<%
+/* 相対パスを取得 */
+var setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("/").length - 1)+"template/";
+
+/* ページID */
+var pageId = "column-detail";
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<% /* ヘッド（titleやdiscriptionやogなど） */ %>
+<%- include(setLayered + "base/head", { pageId: pageId }) %>
+<body class="pageId">
+
+<% /* ヘッダー */ %>
+<%- include(setLayered + "base/header") %>
+
+<% /* パンくず */ %>
+<%- include(setLayered + "list-breadcrumb/list-breadcrumb", {
+	listBreadcrumb: [
+		{
+			txtBreadcrumb: 'top',
+			linkBreadcrumb: 'link-top'	
+		},
+		{
+			txtBreadcrumb: 'プロダクト',
+			linkBreadcrumb: 'link-about'	
+		},
+		{
+			txtBreadcrumb: 'タイトル入ります',
+			linkBreadcrumb: ''	
+		}
+	]
+}) %>
+
+<% /* コラム詳細／見出し・メタ情報 */ %>
+<%- include(setLayered + "column-detail/box-columnHead/box-columnHead", {
+	ttlColumnEnglish: "title from here",
+	ttlColumnJapanese: "タイトル入ります",
+	txtColumnDate: "2018.01.01",
+	txtColumnCategory: "プロダクト"
+}) %>
+
+<% /* コラム詳細／メインコンテンツ */ %>
+<%- include(setLayered + "column-detail/box-columnMain/box-columnMain", {
+	imgColumnMain: "http://senchawan.local/wp-content/uploads/2018/09/1200x630-1-1.png",
+	ttlColumnMainEnglish: "text from here",
+	txtColumnMainEnglish: "text from here.text from here.text from here.text from here.text from here.<br>text from here.text from here.text from here.text from here.text from here.text from here.<br>text from here.text from here.text from here.text from here.text from here.",
+	txtColumnCaptionEnglish: "text from here.text from here.text from here.text from here.text from here.<br>text from here.text from here.text from here.text from here.text from here.",
+	ttlColumnMainjapanese: "テキスト入ります",
+	txtColumnMainjapanese: "テキスト入りますテキスト入ります<br>テキスト入りますテキスト入りますテキスト入りますテキスト入ります<br>テキスト入りますテキスト入りますテキスト入りますテキスト入ります<br>テキスト入りますテキスト入ります",
+	txtColumnCaptionjapanese: "テキスト入りますテキスト入ります<br>テキスト入りますテキスト入りますテキスト入りますテキスト入ります<br>テキスト入りますテキスト入ります"
+}) %>
+
+<% /* コラム詳細／タグ */ %>
+<%- include(setLayered + "column-detail/list-tag/list-tag", {
+	listTag: [
+		{
+			txtListTag: 'インタビュー',
+			linkListTag: 'tag-interview'	
+		},
+		{
+			txtListTag: 'デザイン',
+			linkListTag: 'tag-design'	
+		},
+		{
+			txtListTag: '九谷焼',
+			linkListTag: 'tag-kutaniyaki'	
+		},
+		{
+			txtListTag: '作法',
+			linkListTag: 'tag-sahou'	
+		},
+		{
+			txtListTag: '歴史',
+			linkListTag: 'tag-rekishi'	
+		}
+	]
+}) %>
+
+<% /* 各ページ／見出し */ %>
+<%- include(setLayered + "ttl-pageHead/ttl-pageHead", {
+	ttlPageHead: "関連記事",
+	htmlTag: "h2"
+}) %>
+
+<% /* コラム一覧 */ %>
+<%- include(setLayered + "list-column/list-column", {
+	loopNum: 6
+}) %>
+
+<% /* フッター */ %>
+<%- include(setLayered + "base/footer") %>
+
+</body>
+</html>

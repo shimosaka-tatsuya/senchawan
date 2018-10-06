@@ -1,0 +1,4 @@
+<% if (typeof htmlTag === 'undefined') { var htmlTag = ''; } %>
+<<% if(htmlTag !== ""){ %><%- htmlTag %><% } else { %>h1<% } %> class="ttl-pageHead">
+	<%= ttlPageHead %>
+</<% if(htmlTag !== ""){ %><%- htmlTag %><% } else { %>h1<% } %>><!-- /.ttl-pageHead -->
