@@ -1,1 +1,2 @@
-<a class="btn-detail" href="#">ABOUT 詳細ページへ</a>
+<% if (typeof txtDetail === 'undefined') { var txtDetail = ''; } %>
+<a class="btn-detail" href="#"><% if(txtDetail !== "" ) { %><%= txtDetail %><% } else { %>詳細を見る<% } %></a>
