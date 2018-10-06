@@ -1,5 +1,9 @@
-<ul class="list-breadcrumb">
-	<li class="box-breadcrumb"><a class="txt-breadcrumb" href="#">top</a></li>
-	<li class="box-breadcrumb"><a class="txt-breadcrumb" href="#">about</a></li>
-	<li class="box-breadcrumb"><span class="txt-breadcrumb txt-breadcrumb-inactive">テキスト入りますテキスト入りますテキスト入りますテキスト入ります</span></li>
-</ul><!-- /.list-breadcrumb -->
+<ul class="list-listBreadcrumb">
+<% for (var key in listBreadcrumb) { %>
+	<% if( key == listBreadcrumb.length - 1 ){ %>
+	<li class="box-listBreadcrumb"><span class="txt-listBreadcrumb txt-listBreadcrumb-inactive"><%= listBreadcrumb[key].txtBreadcrumb %></span></li>
+	<% } else if( key !== listBreadcrumb.length - 1 ){ %>
+	<li class="box-listBreadcrumb"><a class="txt-listBreadcrumb" href="<%= listBreadcrumb[key].linkBreadcrumb %>"><%= listBreadcrumb[key].txtBreadcrumb %></a></li>
+	<% } %>
+<% } %>
+</ul><!-- /.list-listBreadcrumb -->

@@ -1,0 +1,9 @@
+<nav class="wp-navigation">
+	<ul class="list-navigation">
+		<% for (var key in navCategory) { %>
+		<li class="btn-navigation">
+			<a href="<%= navCategory[key].linkCategory %>"><%= navCategory[key].txtCategory %></a>
+		</li><!-- /.btn-navigation -->
+		<% } %>
+	</ul><!-- /.list-navigation -->
+</nav><!-- /.wp-navigation -->
