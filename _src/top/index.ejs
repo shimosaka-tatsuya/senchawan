@@ -46,7 +46,9 @@ var pageId = "sample";
 		<dd class="txt-about txt-about-japanese">テキスト入りますテキスト入りますテキスト入りますテキスト入ります</dd>
 	</dl><!-- /.data-about -->
 	
-	<%- include(setLayered + "btn-detail/btn-detail") %>
+	<%- include(setLayered + "btn-detail/btn-detail",{
+		linkDetail: "/about/"
+	}) %>
 </div><!-- /.box-About -->
 
 <% /* トップ／小見出し */ %>
@@ -56,6 +58,14 @@ var pageId = "sample";
 <%- include(setLayered + "list-column/list-column", {
 	loopNum: 6
 }) %>
+
+<%- include(setLayered + "btn-detail/btn-detail",{
+	txtDetail: "コラムをもっと見る",
+	linkDetail: "/column/"
+}) %>
+
+<% /* トップ／小見出し */ %>
+<p class="ttl-sectionHead">instagram</p>
 
 <% /* インスタグラム */ %>
 <div class="box-Instagram">
