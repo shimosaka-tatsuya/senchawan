@@ -1,52 +1,26 @@
-<%
-/* 相対パスを取得 */
-var setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("/").length - 1)+"template/";
+<?php /* Template Name: アバウト */ ?>
 
-/* ページID */
-var pageId = "about";
-%>
-<!DOCTYPE html>
-<html lang="ja">
-<%/* ヘッド（titleやdiscriptionやogなど） */ %>
-<%- include(setLayered + "base/head", { pageId: pageId }) %>
-<body class="pageId">
-
-<%/* ヘッダー */ %>
-<%- include(setLayered + "base/header") %>
-
-<%/* パンくず */ %>
-<%- include(setLayered + "list-breadcrumb/list-breadcrumb", {
-	listBreadcrumb: [
-		{
-			txtBreadcrumb: 'top',
-			linkBreadcrumb: 'link-top'	
-		},
-		{
-			txtBreadcrumb: 'about',
-			linkBreadcrumb: 'link-about'	
-		}
-	]
-}) %>
+<?php get_header(); ?>
 
 <h1 class="img-mainVisual">
 	<img src="https://placehold.jp/1200x630.png" alt="アバウトの見出し" width="100%" height="" >
 </h1><!-- /.img-mainVisual -->
 
-<%/* 各ページ／見出し */ %>
-<%- include(setLayered + "ttl-pageHead/ttl-pageHead", {
-	ttlPageHead: "concept",
-	htmlTag: "h2"
-}) %>
+
+
+<h2 class="ttl-pageHead">
+	concept
+</h2><!-- /.ttl-pageHead -->
 
 <p class="txt-conceptEnglish">I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
 	I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
 	I will input the CONCEPT from here.I will input the CONCEPT from here.</p><!-- /.txt-conceptEnglish -->
 
-<%/* 各ページ／見出し */ %>
-<%- include(setLayered + "ttl-pageHead/ttl-pageHead", {
-	ttlPageHead: "コンセプト入ります",
-	htmlTag: "h2"
-}) %>
+
+
+<h2 class="ttl-pageHead">
+	コンセプト入ります
+</h2><!-- /.ttl-pageHead -->
 
 <p class="txt-conceptJapanese">テキスト入りますテキスト入ります<br>
 	テキスト入りますテキスト入りますテキスト入りますテキスト入ります<br>
@@ -70,12 +44,8 @@ var pageId = "about";
 	
 </div><!-- /.box-profile -->
 
-<%- include(setLayered + "btn-detail/btn-detail",{
-	linkDetail: "/",
-	txtDetail: "トップへ戻る"
-}) %>
 
-<!-- フッター -->
-<%- include(setLayered + "base/footer") %>
-</body>
-</html>
+
+<a class="btn-detail" href="/">トップへ戻る</a>
+
+<?php get_footer();

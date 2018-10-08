@@ -63,7 +63,7 @@
 	<?php while ( $st_query->have_posts() ) : $st_query->the_post(); ?>
 	<li class="box-newColumn">
 		<a href="<?php the_permalink(); ?>">
-			<img class="img-mainVisual" src="<?php $eye_img = wp_get_attachment_image_src( get_post_thumbnail_id() , 'thumbnail' ); print_r($eye_img[0]); ?>" alt="『<?php the_title(); ?>』のサムネイル / thumbnail of '<?php the_field('ttlColumnEnglish'); ?>'" width="100%" height="">
+			<img class="img-mainVisual" src="<?php $eye_img = wp_get_attachment_image_src( get_post_thumbnail_id() , 'medium' ); print_r($eye_img[0]); ?>" alt="『<?php the_title(); ?>』のサムネイル / thumbnail of '<?php the_field('ttlColumnEnglish'); ?>'" width="300" height="">
 			<p class="txt-otherColumnCategory"><?php echo get_cat_name(get_the_category()[0]->term_id); ?></p>
 			<p class="ttl-newColumn-english"><?php the_field('ttlColumnEnglish'); ?></p>
 			<p class="ttl-newColumn-japanese"><?php the_title(); ?></p>
@@ -83,26 +83,4 @@
 <div class="box-Instagram">
 	インスタグラム（後ほど実装）
 </div><!-- /.box-Instagram -->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="/js/jquery.bxslider.min.js"></script>
-<script>
-  $(document).ready(function(){
-    $('.box-mainVisual').bxSlider({
-	    mode: "horizontal",
-	    auto: true,
-	    speed: "500",
-	    pause: "3000",
-	    infiniteLoop: true,
-	    captions: false,
-	    responsive: true,
-	    touchEnabled: true,
-	    pager: true,
-	    controls: true,
-	    nextText: "次へ",
-	    prevText: "前へ",
-	    easing: "ease"
-    });
-  });
-</script>
 <?php get_footer(); ?>

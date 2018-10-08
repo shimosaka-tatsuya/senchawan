@@ -33,7 +33,11 @@
 	} ?>
 </div><!-- /.box-shareButton -->
 
-<ul class="list-otherColumn">
+<h2 class="ttl-pageHead">
+	関連記事
+</h2><!-- /.ttl-pageHead -->
+
+<ul class="list-column">
 <?php
 // カテゴリーが複数設定されている場合は、どれかをランダムに取得
 $categories = wp_get_post_categories($post->ID, array('orderby'=>'rand'));
@@ -50,15 +54,15 @@ $my_query = new WP_Query($args);
 if( $my_query->have_posts() ) {
 while ($my_query->have_posts()) { $my_query->the_post(); 
 ?>
-	<li class="box-otherColumn">
-		<a href="<?php the_permalink(); ?>">
-			<img class="img-mainVisual" src="<?php $eye_img = wp_get_attachment_image_src( get_post_thumbnail_id() , 'thumbnail' ); print_r($eye_img[0]); ?>" alt="『<?php the_title(); ?>』のサムネイル / thumbnail of '<?php the_field('ttlColumnEnglish'); ?>'" width="100%" height="">
-			<p class="txt-otherColumnCategory"><?php echo get_cat_name(get_the_category()[0]->term_id); ?></p>
-			<p class="ttl-otherColumn-english"><?php the_field('ttlColumnEnglish'); ?></p>
-			<p class="ttl-otherColumn-japanese"><?php the_title(); ?></p>
-		</a>
-		<p class="txt-otherColumnDate"><?php the_time('Y.m.d'); ?></p>
-	</li><!-- /.box-otherColumn -->
+	<li class="box-column">
+		<a class="box-columnInr" href="<?php the_permalink(); ?>">
+			<img class="img-column" src="<?php $eye_img = wp_get_attachment_image_src( get_post_thumbnail_id() , 'thumbnail' ); print_r($eye_img[0]); ?>" alt="『<?php the_title(); ?>』のサムネイル / thumbnail of '<?php the_field('ttlColumnEnglish'); ?>'" width="300" height="">
+			<p class="ttl-columnCategory"><?php echo get_cat_name(get_the_category()[0]->term_id); ?></p>
+			<p class="ttl-column ttl-column-english"><?php the_field('ttlColumnEnglish'); ?></p>
+			<p class="ttl-column ttl-column-japanese"><?php the_title(); ?></p>
+		</a><!-- /.box-columnInr -->
+		<p class="txt-columnDate"><?php the_time('Y.m.d'); ?></p>
+	</li><!-- /.box-column -->
 <?php } wp_reset_query();
 } else { ?>
 	<li class="box-otherColumn box-otherColumn-none">同一カテゴリのコラムはありません。</li><!-- /.box-otherColumn-none -->
