@@ -2,14 +2,21 @@
 
 <h1 class="ttl-listName"><?php single_tag_title( ); ?>の一覧</h1>
 
+<?php // コラム一覧のナビゲーション ?>
+<?php get_template_part( 'template-parts/list-column/list-column-navigation', get_post_format() ); ?>
+
+<?php // コラム一覧 ?>
 <?php if ( have_posts() ) : ?>
-<ul>
+<ul class="list-column">
 <?php while ( have_posts() ) : the_post(); ?>
-	<li>
-		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-	</li>
+
+<?php // コラム ?>
+<?php get_template_part( 'template-parts/list-column/box-column', get_post_format() ); ?>
+	
 <?php endwhile; ?>
-</ul>
+</ul><!-- /.list-column -->
+
+<!-- ページネーション -->
 <?php
 	the_posts_pagination( array(
 		'prev_text' => '&lt;',

@@ -1,2 +1,3 @@
 <% if (typeof txtDetail === 'undefined') { var txtDetail = ''; } %>
-<a class="btn-detail" href="#"><% if(txtDetail !== "" ) { %><%= txtDetail %><% } else { %>詳細を見る<% } %></a>
+<% if (typeof linkDetail === 'undefined') { var linkDetail = ''; } %>
+<a class="btn-detail" href="<% if(linkDetail !== "" ) { %><%= linkDetail %><% } else { %>#<% } %>"><% if(txtDetail !== "" ) { %><%= txtDetail %><% } else { %>詳細を見る<% } %></a>

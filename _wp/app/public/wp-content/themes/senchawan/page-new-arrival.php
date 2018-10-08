@@ -2,28 +2,31 @@
 
 <?php get_header(); ?>
 
-<h1 class="ttl-listName">columnの一覧</h1>
+<h1 class="ttl-pageHead">
+	全column一覧
+</h1><!-- /.ttl-pageHead -->
 
-<!-- 新着記事の取得 -->
+<?php // コラム一覧のナビゲーション ?>
+<?php get_template_part( 'template-parts/list-column/list-column-navigation', get_post_format() ); ?>
+
+<?php // 新着コラムの取得 ?>
 <?php
 $paged = (int) get_query_var('paged');
 $args = array(
 'posts_per_page' => get_option('posts_per_page'),
 'paged' => $paged,
-'orderby' => 'post_date',
-'order' => 'DESC',
 'post_type' => 'post',
-'post_status' => 'publish'
 );
 $the_query = new WP_Query($args);
 ?>
-<ul>
+<ul class="list-column">
 <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-	<li>
-		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-	</li>
+
+<?php // コラム ?>
+<?php get_template_part( 'template-parts/list-column/box-column', get_post_format() ); ?>
+
 <?php endwhile; endif; wp_reset_postdata(); ?>
-</ul>
+</ul><!-- /.list-column -->
 
 <!-- ページネーション -->
 <nav class="navigation pagination" role="navigation">

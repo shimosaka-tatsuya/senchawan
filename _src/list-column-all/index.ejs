@@ -33,25 +33,25 @@ var pageId = "column-all";
 	ttlPageHead: "コラム一覧"
 }) %>
 
-<% /* コラム一覧／カテゴリーナビゲーション */ %>
+<% /*  コラム一覧／カテゴリーナビゲーション */ %>
 <%- include(setLayered + "nav-category/nav-category", {
 	pageId: pageId,
 	navCategory: [
 		{
-			txtCategory: "全記事",
-			linkCategory: "category-all"		
+			txtCategory: "all",
+			linkCategory: "/column/"		
 		},
 		{
-			txtCategory: "カルチャー",
-			linkCategory: "category-culture"		
+			txtCategory: "culture",
+			linkCategory: "/category/culture/"		
 		},
 		{
-			txtCategory: "ニュース",
-			linkCategory: "category-news"		
+			txtCategory: "news",
+			linkCategory: "/category/news/"		
 		},
 		{
-			txtCategory: "プロダクト",
-			linkCategory: "category-product"		
+			txtCategory: "product",
+			linkCategory: "/category/product/"		
 		}
 	]
 }) %>
