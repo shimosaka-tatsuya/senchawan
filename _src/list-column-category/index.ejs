@@ -34,7 +34,7 @@ var pageId = "column-category";
 }) %>
 
 <% /*  コラム一覧／カテゴリーナビゲーション */ %>
-<%- include(setLayered + "nav-category/nav-category", {
+<%- include(setLayered + "list-column/list-column-navigation/list-column-navigation", {
 	pageId: pageId,
 	navCategory: [
 		{
@@ -57,12 +57,14 @@ var pageId = "column-category";
 }) %>
 
 <% /*  コラム一覧 */ %>
-<%- include(setLayered + "list-column/list-column", {
+<ul class="list-column">
+<%- include(setLayered + "list-column/box-column/box-column", {
 	loopNum: 12
 }) %>
+</ul><!-- /.list-column -->
 
 <% /*  コラム一覧／ページネーション */ %>
-<%- include(setLayered + "nav-pagenation/nav-pagenation") %>
+<%- include(setLayered + "list-column/nav-pagenation/nav-pagenation") %>
 
 <% /*  フッター */ %>
 <%- include(setLayered + "base/footer") %>

@@ -28,7 +28,7 @@ $the_query = new WP_Query($args);
 <?php endwhile; endif; wp_reset_postdata(); ?>
 </ul><!-- /.list-column -->
 
-<!-- ページネーション -->
+<?php // ページネーション（archive.phpとは形式が違うので注意） ?>
 <nav class="navigation pagination" role="navigation">
 	<div class="nav-links">
 		<?php $paged = (int) get_query_var('paged'); ?>

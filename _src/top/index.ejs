@@ -55,9 +55,11 @@ var pageId = "sample";
 <p class="ttl-sectionHead">column</p>
 
 <% /* コラム一覧 */ %>
-<%- include(setLayered + "list-column/list-column", {
+<ul class="list-column">
+<%- include(setLayered + "list-column/box-column/box-column", {
 	loopNum: 6
 }) %>
+</ul><!-- /.list-column -->
 
 <%- include(setLayered + "btn-detail/btn-detail",{
 	txtDetail: "コラムをもっと見る",
