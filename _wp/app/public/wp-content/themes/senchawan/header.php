@@ -61,10 +61,6 @@
 
 <?php // パンくず。トップページ以外で読み込ませる。 ?>
 <?php if (!is_home()) { ?>
-<ul class="list-breadcrumb breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
-  <?php if(function_exists('bcn_display'))
-  {
-   bcn_display();
-  }?>
-</ul>
+<?php // パンくず ?>
+<?php get_template_part( 'template-parts/list-breadcrumb/list-breadcrumb', get_post_format() ); ?>
 <?php } ?>

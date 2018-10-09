@@ -16,7 +16,7 @@
 <?php endwhile; ?>
 </ul><!-- /.list-column -->
 
-<!-- ページネーション -->
+<?php // ページネーション（page-new-arrival.phpとは形式が違うので注意） ?>
 <?php
 	the_posts_pagination( array(
 		'prev_text' => '&lt;',
@@ -24,8 +24,6 @@
 	) );
 ?>
 
-<?php else :
-	get_template_part( 'template-parts/post/content', 'none' );
-endif; ?>
+<?php endif; ?>
 
 <?php get_footer(); ?>

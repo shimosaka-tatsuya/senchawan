@@ -84,9 +84,11 @@ var pageId = "column-detail";
 }) %>
 
 <% /* コラム一覧 */ %>
-<%- include(setLayered + "list-column/list-column", {
+<ul class="list-column">
+<%- include(setLayered + "list-column/box-column/box-column", {
 	loopNum: 6
 }) %>
+</ul><!-- /.list-column -->
 
 <% /* フッター */ %>
 <%- include(setLayered + "base/footer") %>

@@ -53,9 +53,11 @@ var pageId = "sample";
 <p class="ttl-sectionHead">column</p>
 
 <!-- コラム一覧 -->
-<%- include(setLayered + "list-column/list-column", {
+<ul class="list-column">
+<%- include(setLayered + "list-column/box-column/box-column", {
 	loopNum: 6
 }) %>
+</ul><!-- /.list-column -->
 
 <!-- フッター -->
 <%- include(setLayered + "base/footer") %>
@@ -88,7 +90,7 @@ var pageId = "sample";
 }) %>
 
 <!-- コラム一覧／カテゴリーナビゲーション -->
-<%- include(setLayered + "nav-category/nav-category", {
+<%- include(setLayered + "list-column/list-column-navigation/list-column-navigation", {
 	navCategory: [
 		{
 			txtCategory: "全記事",
@@ -110,7 +112,7 @@ var pageId = "sample";
 }) %>
 
 <!-- コラム一覧／ページネーション -->
-<%- include(setLayered + "nav-pagenation/nav-pagenation") %>
+<%- include(setLayered + "list-column/nav-pagenation/nav-pagenation") %>
 
 <!-- コラム詳細／見出し・メタ情報 -->
 <%- include(setLayered + "column-detail/box-columnHead/box-columnHead", {
