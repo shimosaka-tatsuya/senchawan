@@ -24,5 +24,8 @@
     <%# ファビコン %>
     <link rel="icon" href="ファビコンのサンプル" sizes="16x16" type="image/png">
     
-    <link rel="stylesheet" type="text/css" href="style.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.min.css">
+    <% if (typeof cssFileName === 'undefined') { var cssFileName = ''; } for (var key in cssFileName) { %>
+	<link rel="stylesheet" type="text/css" href="/css/<%- cssFileName[key] %>.min.css">
+	<% } %>
 </head>

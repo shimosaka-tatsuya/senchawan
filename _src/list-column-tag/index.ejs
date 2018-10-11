@@ -4,11 +4,14 @@ var setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("
 
 /* ページID */
 var pageId = "column-tag";
+
+/* cssのファイル名（拡張子は不要。複数ある場合は、『,』で区切って記入） */
+var cssFileName = ["list-column"];
 %>
 <!DOCTYPE html>
 <html lang="ja">
 <% /* ヘッド（titleやdiscriptionやogなど） */ %>
-<%- include(setLayered + "base/head", { pageId: pageId }) %>
+<%- include(setLayered + "base/head", { pageId: pageId, cssFileName: cssFileName }) %>
 <body class="pageId">
 
 <% /* ヘッダー */ %>
