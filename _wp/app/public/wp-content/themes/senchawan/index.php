@@ -77,4 +77,5 @@
 
 <ul id="instafeed" class="list-instagram"></ul>
 <p class="btn-instagramMore">インスタグラムをもっとみる</p>
+
 <?php get_footer(); ?>
