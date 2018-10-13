@@ -14,23 +14,23 @@
 <script>
 	// メインビジュアルの設定
 	$(document).ready(function(){
-	$('.box-mainVisual').bxSlider({
-		mode: "horizontal",
-		auto: true,
-		speed: "500",
-		pause: "3000",
-		infiniteLoop: true,
-		captions: false,
-		responsive: true,
-		touchEnabled: true,
-		pager: true,
-		controls: true,
-		nextText: "次へ",
-		prevText: "前へ",
-		easing: "ease"
+		$('.box-mainVisual').bxSlider({
+			mode: "horizontal",
+			auto: true,
+			speed: "500",
+			pause: "3000",
+			infiniteLoop: true,
+			captions: false,
+			responsive: true,
+			touchEnabled: true,
+			pager: true,
+			controls: true,
+			nextText: "次へ",
+			prevText: "前へ",
+			easing: "ease"
 		});
 	});
-
+	
 	// インスタグラムの設定
 	$(document).ready(function() {
 		var feed = new Instafeed({
