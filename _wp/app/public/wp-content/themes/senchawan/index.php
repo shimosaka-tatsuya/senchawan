@@ -75,7 +75,6 @@
 
 <p class="ttl-sectionHead">instagram</p>
 
-<div class="box-Instagram">
-	インスタグラム（後ほど実装）
-</div><!-- /.box-Instagram -->
+<ul id="instafeed" class="list-instagram"></ul>
+<p class="btn-instagramMore">インスタグラムをもっとみる</p>
 <?php get_footer(); ?>
