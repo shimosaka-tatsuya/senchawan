@@ -42,7 +42,7 @@
 			links: true ,
 			limit: 8,
 			resolution: 'standard_resolution',
-			template: '<li class="img-instagram"><a href="{{link}} target="_blank""><img src="{{image}}" /></a></li>'
+			template: '<li class="img-instagram"><a href="{{link}}" target="_blank"><img src="{{image}}" /></a></li>'
 		});
 	
 		$('.btn-instagramMore').click(function() {
