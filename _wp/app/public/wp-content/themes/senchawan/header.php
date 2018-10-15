@@ -5,9 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" type="text/css" href="/css/base.min.css">
+<?php // トップページのスタイル ?><?php if (is_home() && !is_paged()) { ?><link rel="stylesheet" type="text/css" href="/css/top.min.css"><?php } ?>
+<?php // アバウトページのスタイル ?><?php if(is_page( '453' )) { ?><link rel="stylesheet" type="text/css" href="/css/about.min.css"><?php } ?>
+<?php // コラム一覧ページのスタイル ?><?php if(is_page( '2' ) or is_archive()) { ?><link rel="stylesheet" type="text/css" href="/css/list-column.min.css"><?php } ?>
+<?php // 記事ページのスタイル ?><?php if( is_single() ) { ?><link rel="stylesheet" type="text/css" href="/css/column-detail.min.css"><?php } ?>
 
-<?php // 記事ページのスタイル ?>
-<?php if( is_single() ) : ?><link rel="stylesheet" type="text/css" href="/css/column-detail.min.css"><?php endif; ?>
 
 <?php
 	wp_deregister_script( 'jquery' ); 
