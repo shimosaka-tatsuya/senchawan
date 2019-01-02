@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Meddon|Noto+Sans+JP');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
 
 body {
-	font-family:"メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3",Osaka,"ＭＳ Ｐゴシック",sans-serif;
-	color: #333;
-	font-size: 16px;
+	font-family: 'Noto Sans TC', sans-serif;
+	color: #000;
+	font-size: 14px;
+}
+
+.txt-fontAlphabet {
+	font-family: 'Lato', sans-serif;
 }
 
 #hamburgerMenuInput {
