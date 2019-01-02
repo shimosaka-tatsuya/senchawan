@@ -11,14 +11,93 @@ body {
 	font-family: 'Lato', sans-serif;
 }
 
-#hamburgerMenuInput {
-	display: none;
+/* -------------------- ヘッダー */
+.box-header {
+	display: flex;
+	justify-content: space-between;
+	padding: 60px 64px 68px;
 }
 
-.box-hamburgerMenu {
-	display: none;
+.box-siteLogo {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 36px;
 }
 
-#hamburgerMenuInput:checked ~ .box-hamburgerMenu {
-	display: block;
+.txt-outLineSite {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1.7;
+	letter-spacing: .05em;
+}
+
+.list-globalNavigation {
+	padding-top: 48px;
+}
+
+.item-globalNavigation {
+	margin-left: 38px;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	
+	&:nth-child(1) {
+		margin-left: 0;
+	}
+}
+
+.btn-globalNavigation,
+.btn-globalNavigationArchive {
+	text-decoration: none;
+	color: #000;
+	padding: 10px 0;
+	letter-spacing: .05em;
+	font-weight: 700;
+	transition-property: opacity;
+	transition-duration: .3s;
+	transition-timing-function: ease;
+	
+	&:hover {
+		opacity: .5;
+	}
+}
+
+.list-globalNavigationArchive {
+	position: absolute;
+	top: calc( 1em + 9px );
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition-property: opacity;
+	transition-duration: .3s;
+	transition-timing-function: ease;
+}
+
+.item-globalNavigation:hover > .list-globalNavigationArchive {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.item-globalNavigationArchive {
+	margin-top: 3px;
+	
+	&:nth-child(1) {
+		margin-top: 0;
+	}
+}
+
+.btn-globalNavigationArchive {
+	padding: 4px 0;
+	font-size: 13px;
+	font-style: italic;
+	font-weight: 400;
+	display: inline-block;
+	letter-spacing: .08em;
+	white-space: nowrap;
+	
+	&:before {
+		content: "-";
+		display: inline-block;
+		margin-right: 2px;
+	}
 }
