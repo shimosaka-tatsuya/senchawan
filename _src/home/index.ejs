@@ -3,7 +3,7 @@
 var setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("/").length - 1)+"template/";
 
 /* ページID */
-var pageId = "sample";
+var pageId = "area-home";
 
 /* cssのファイル名（拡張子は不要。複数ある場合は、『,』で区切って記入） */
 var cssFileName = ["top"];
@@ -12,7 +12,7 @@ var cssFileName = ["top"];
 <html lang="ja">
 <% /* ヘッド（titleやdiscriptionやogなど） */ %>
 <%- include(setLayered + "base/head", { pageId: pageId, cssFileName: cssFileName }) %>
-<body class="pageId">
+<body class="<%- pageId  %>">
 
 <% /* ヘッダー */ %>
 <%- include(setLayered + "base/header") %>
@@ -69,19 +69,13 @@ var cssFileName = ["top"];
 	linkDetail: "/column/"
 }) %>
 
-<% /* トップ／小見出し */ %>
-<p class="ttl-sectionHead">instagram</p>
-
-<% /* インスタグラム */ %>
-<ul id="instafeed" class="list-instagram"></ul>
-<p class="btn-instagramMore">インスタグラムをもっとみる</p>
-
 <% /* フッター */ %>
 <%- include(setLayered + "base/footer") %>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="/js/jquery.bxslider.min.js"></script>
 <script src="/js/instafeed.min.js"></script>
+<script src="/js/base.min.js"></script>
 <script>
 	// メインビジュアルの設定
 	$(document).ready(function(){
@@ -100,27 +94,6 @@ var cssFileName = ["top"];
 			prevText: "前へ",
 			easing: "ease"
 		});
-	});
-	
-	// インスタグラムの設定
-	$(document).ready(function() {
-		var feed = new Instafeed({
-			target: 'instafeed',
-			get: 'user',
-			userId: '1505949283',
-			accessToken:'1505949283.efb1764.849218d89466419b9d87f6719a6bd991',
-			clientId: 'efb17640a588441eac32489b08794145',
-			links: true ,
-			limit: 8,
-			resolution: 'standard_resolution',
-			template: '<li class="img-instagram"><a href="{{link}}" target="_blank"><img src="{{image}}" /></a></li>'
-		});
-	
-		$('.btn-instagramMore').click(function() {
-			feed.next();
-		});
-		
-		feed.run();
 	});
 </script>
 </body>
