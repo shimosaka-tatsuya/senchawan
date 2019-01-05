@@ -3,7 +3,7 @@
 var setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("/").length - 1)+"template/";
 
 /* ページID */
-var pageId = "sample";
+var pageId = "area-home";
 
 /* cssのファイル名（拡張子は不要。複数ある場合は、『,』で区切って記入） */
 var cssFileName = ["top"];
@@ -12,7 +12,7 @@ var cssFileName = ["top"];
 <html lang="ja">
 <% /* ヘッド（titleやdiscriptionやogなど） */ %>
 <%- include(setLayered + "base/head", { pageId: pageId, cssFileName: cssFileName }) %>
-<body class="pageId">
+<body class="<%- pageId  %>">
 
 <% /* ヘッダー */ %>
 <%- include(setLayered + "base/header") %>

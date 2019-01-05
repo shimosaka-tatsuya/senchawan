@@ -16,6 +16,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	padding: 60px 64px 68px;
+	min-width: 1152px;
 }
 
 .box-siteLogo {
@@ -29,10 +30,12 @@ body {
 	vertical-align: middle;
 	line-height: 1.7;
 	letter-spacing: .05em;
+	font-size: 14px;
 }
 
 .list-globalNavigation {
 	padding-top: 48px;
+	position: relative;
 }
 
 .item-globalNavigation {
@@ -56,6 +59,7 @@ body {
 	transition-property: opacity;
 	transition-duration: .3s;
 	transition-timing-function: ease;
+	font-size: 14px;
 	
 	&:hover {
 		opacity: .5;
@@ -86,6 +90,62 @@ body {
 	}
 }
 
+@keyframes transformIcon {
+	0% {
+		transform: scaleX(1) scaleY(1);
+	}
+	50% {
+		transform: scaleX(2.5) scaleY(.7);
+	}
+	100% {
+		transform: scaleX(1) scaleY(1);
+	}
+}
+
+.ico-globalNavigation {
+	display: block;
+	width: 6px;
+	height: 6px;
+	background-color: #000;
+	border-radius: 50%;
+	position: absolute;
+	top: 32px;
+	transition-property: left, opacity;
+	transition-timing-function: ease-in-out;
+	transition-duration: .4s;
+}
+
+.area-home .ico-globalNavigation,
+.item-globalNavigation-home:hover~.ico-globalNavigation {
+	left: 15px;
+}
+
+.area-archive .ico-globalNavigation,
+.item-globalNavigation-archive:hover~.ico-globalNavigation {
+	left: 104px;
+}
+
+.area-about .ico-globalNavigation,
+.item-globalNavigation-about:hover~.ico-globalNavigation {
+	left: 195px;
+}
+
+.item-globalNavigation-home:hover~.ico-globalNavigation,
+.item-globalNavigation-archive:hover~.ico-globalNavigation,
+.item-globalNavigation-about:hover~.ico-globalNavigation {
+	opacity: .4;
+	animation-name: transformIcon;
+	animation-duration: .4s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: both;
+}
+
+.area-home .item-globalNavigation-home:hover~.ico-globalNavigation,
+.area-archive .item-globalNavigation-archive:hover~.ico-globalNavigation,
+.area-about .item-globalNavigation-about:hover~.ico-globalNavigation {
+	animation-name: none;
+}
+
 .btn-globalNavigationArchive {
 	padding: 4px 0;
 	font-size: 13px;
@@ -94,10 +154,8 @@ body {
 	display: inline-block;
 	letter-spacing: .08em;
 	white-space: nowrap;
+}
+
+@media screen and (max-width:812px) {
 	
-	&:before {
-		content: "-";
-		display: inline-block;
-		margin-right: 2px;
-	}
 }
