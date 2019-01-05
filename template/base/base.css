@@ -13,10 +13,13 @@ body {
 
 /* -------------------- ヘッダー */
 .box-header {
-	display: flex;
-	justify-content: space-between;
+	overflow: hidden;
 	padding: 60px 64px 68px;
 	min-width: 1152px;
+}
+
+.box-siteSymbol {
+	float: left;
 }
 
 .box-siteLogo {
@@ -42,7 +45,12 @@ body {
 	display: none;
 }
 
+.box-siteLogo-hamburger {
+	display: none;
+}
+
 .list-globalNavigation {
+	float: right;
 	padding-top: 48px;
 	position: relative;
 }
@@ -72,6 +80,11 @@ body {
 	
 	&:hover {
 		opacity: .5;
+	}
+	
+	&:focus,
+	&:visited {
+		color: #000;
 	}
 }
 
@@ -165,6 +178,10 @@ body {
 	white-space: nowrap;
 }
 
+.box-headerMeta {
+	display: none;
+}
+
 @media screen and (max-width:812px) {
 
 .box-header {
@@ -175,6 +192,8 @@ body {
 .box-siteLogo {
 	margin-right: 16px;
 	width: 31px;
+	vertical-align: top;
+	margin-top: 5px;
 }
 
 .txt-outLineSite {
@@ -182,6 +201,7 @@ body {
 }
 
 .btn-hamburgerMenu {
+	float: right;
 	display: block;
 	width: 22px;
 	height: 18px;
@@ -198,7 +218,7 @@ body {
 		height: 1px;
 		background-color: #000;
 		position: absolute;
-		transition-property: transform, opacity;
+		transition-property: transform, opacity, background-color;
 		transition-duration: .2s;
 		transition-timing-function: ease-in-out;
 		transform-origin: right;
@@ -220,6 +240,12 @@ body {
 }
 
 #hamburgerMenuInput:checked~.btn-hamburgerMenu {
+	& > span,
+	&::before,
+	&::after {
+		background-color: #fff;
+	}
+	
 	& > span {
 		transform: scaleX(0);
 		opacity: 0;
@@ -239,7 +265,7 @@ body {
 	}
 }
 
-.list-globalNavigation {
+.box-globalNavigation {
 	opacity: 0;
 	pointer-events: none;
 	position: fixed;
@@ -247,18 +273,126 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #fff;
+	background-color: #1e1e1e;
 	z-index: 1;
 	transition-property: opacity;
 	transition-duration: .2s;
 	transition-timing-function: ease-in-out;
 }
 
-#hamburgerMenuInput:checked~.list-globalNavigation {
+#hamburgerMenuInput:checked~.box-globalNavigation {
 	opacity: 1;
 	pointer-events: auto;
 }
+
+#hamburgerMenuInput:checked~.box-globalNavigation > .box-siteLogo-hamburger {
+	display: block;
+	width: 31px;
+	margin: 26px 0 0 25px;
+}
+
+.list-globalNavigation {
+	padding-top: 102px;
+	float: none;
+}
+
+.item-globalNavigation {
+	margin: 0;
+	display: block;
+	padding: 0 21px;
+	box-sizing: border-box;
 	
+	&:before {
+		content: "→";
+		display: block;
+		width: 1em;
+		height: 1em;
+		position: absolute;
+		right: 24px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		font-size: 18px;
+		color: #fff;
+	}
+}
+
+.btn-globalNavigation,
+.btn-globalNavigationArchive {
+	color: #fff!important;
+	padding: 21px 0;
+	font-size: 18px;
+	display: block;
+	font-weight: 400;
+}
+
+.ico-globalNavigation {
+	display: none;
+}
+
+.box-headerMeta {
+	display: block;
+	margin-top: 77px;
+	padding: 0 21px;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+.data-headerMetaSns {
+	margin-bottom: 22px;
+}
+
+.ttl-headerMetaSns {
+	font-size: 12px;
+	font-weight: 600;
+	position: relative;
+	display: inline-block;
+	padding-right: 28px;
+	margin-right: 12px;
+	vertical-align: middle;
+	
+	&:before {
+		content: "";
+		display: block;
+		width: 15px;
+		height: 1px;
+		background-color: #fff;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+	}
+	
+}
+
+.box-headerMetaSns {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+}
+
+.ico-headerMetaSns {
+	display: inline-block;
+	margin-right: 11px;
+}
+
+.box-headerMetaNavigation {
+	margin-bottom: 14px;
+}
+
+.box-headerMetaNavigation > a {
+	color: #fff;
+	line-height: 1;
+	text-decoration: none;
+	
+	&:hover,
+	&:focus,
+	&:visited {
+		color: #fff;
+	}
+}
+
 }
 
 @media screen and (max-width:320px) {
