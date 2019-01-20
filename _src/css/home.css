@@ -8,12 +8,15 @@
 	width: 100%;
 	max-width: 2340px;
 	margin: 0 auto;
-/* 	background: url("/img/home/bg-mainvisualDummy.jpg") center top no-repeat; */
+	transition-property: background-size;
+	transition-duration: .5s;
+	transition-timing-function: ease-in-out;
+	background: url("/img/home/bg-mainvisualDummy.jpg") center top no-repeat;
 	background-size: 100%;
 }
 
 .box-mainVisual {
-	max-width: 2000px;
+	max-width: 2128px;
 	min-width: 980px;
 	margin: 0 auto;
 	padding: 0 64px;
@@ -85,6 +88,7 @@
 	font-size: 14px;
 	margin-top: 24px;
 	letter-spacing: .1em;
+	color: #000;
 }
 
 /* PC View - Small */
