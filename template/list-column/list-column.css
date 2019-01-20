@@ -1,0 +1,24 @@
+/* PC View */
+.list-column {
+	max-width: 2128px;
+	min-width: 980px;
+	margin: 0 auto;
+	padding: 0 64px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* SP View */
+@media screen and (max-width:812px) {
+
+.list-column {
+	width: calc(100% - 40px);
+	max-width: unset;
+	min-width: unset;
+	padding: 0;
+	display: flex;
+	flex-flow: column;
+}
+
+}
