@@ -1,4 +1,5 @@
 @import "./../../template/btn-detail/btn-detail";
+@import "./../../template/list-column/list-column";
 @import "./../../template/list-column/box-column/box-column";
 
 /* ----------【メインビジュアル】---------- */
@@ -9,9 +10,9 @@
 	max-width: 2340px;
 	margin: 0 auto;
 	transition-property: background-size;
-	transition-duration: .5s;
+	transition-duration: .3s;
 	transition-timing-function: ease-in-out;
-	background: url("/img/home/bg-mainvisualDummy.jpg") center top no-repeat;
+/* 	background: url("/img/home/bg-mainvisualDummy.jpg") center top no-repeat; */
 	background-size: 100%;
 }
 
@@ -173,3 +174,30 @@
 
 }
 
+/* ----------【記事リスト】---------- */
+.list-column {
+	margin-top: 40px;
+}
+
+/* ----------【Moreボタン】---------- */
+.wp-detail {
+	max-width: 2128px;
+	min-width: 980px;
+	margin: 58px auto 0;
+	padding: 0 64px;
+	box-sizing: border-box;
+	text-align: right;
+}
+
+/* SP View */
+@media screen and (max-width:812px) {
+
+.wp-detail {
+	max-width: unset;
+	min-width: unset;
+	margin: 40px auto 0;
+	padding: 0 20px;
+	text-align: left;
+}
+
+}

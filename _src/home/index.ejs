@@ -33,6 +33,21 @@ var cssFileName = ["home"];
 	</div><!-- /.img-mainVisual -->
 </div><!-- /.box-mainVisual -->
 
+<% /* コラム一覧 */ %>
+<ul class="list-column">
+<%- include(setLayered + "list-column/box-column/box-column", {
+	loopNum: 3
+}) %>
+</ul><!-- /.list-column -->
+
+<div class="wp-detail">
+	<% /* ボタン */ %>
+	<%- include(setLayered + "btn-detail/btn-detail",{
+		txtDetail: "More",
+		linkDetail: "/column/"
+	}) %>
+</div><!-- /.box-otherColumn -->
+
 <% /* トップ／アバウト */ %>
 <div class="box-about">
 	<dl class="data-about">
@@ -45,21 +60,6 @@ var cssFileName = ["home"];
 		linkDetail: "/about/"
 	}) %>
 </div><!-- /.box-About -->
-
-<% /* トップ／小見出し */ %>
-<p class="ttl-sectionHead">column</p>
-
-<% /* コラム一覧 */ %>
-<ul class="list-column">
-<%- include(setLayered + "list-column/box-column/box-column", {
-	loopNum: 6
-}) %>
-</ul><!-- /.list-column -->
-
-<%- include(setLayered + "btn-detail/btn-detail",{
-	txtDetail: "コラムをもっと見る",
-	linkDetail: "/column/"
-}) %>
 
 <% /* フッター */ %>
 <%- include(setLayered + "base/footer") %>

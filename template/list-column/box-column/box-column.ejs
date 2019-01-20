@@ -1,11 +1,13 @@
 <% for (var i = 0; i < loopNum; i++) { %>
-<li class="box-column">
-	<a class="box-columnInr" href="#">
-		<img class="img-column" src="https://placehold.jp/240x180.png" alt="thumbnail of title from here / タイトル入りますのサムネイル">
-		<p class="ttl-columnCategory">プロダクト</p>
-		<p class="ttl-column ttl-column-english">title from heretitle from heretitle from here</p>
-		<p class="ttl-column ttl-column-japanese">タイトル入りますタイトル入りますタイトル入ります</p>
-	</a><!-- /.box-columnInr -->
-	<p class="txt-columnDate">2018.01.01</p>
-</li><!-- /.box-column -->
+<li class="wp-column">
+	<a class="box-column" href="#">
+		<div class="img-column">
+			<img src="https://placehold.jp/240x180.png" alt="thumbnail of title from here / タイトル入りますのサムネイル" width="100%" height="">
+			<p class="txt-columnCategory txt-fontAlphabet">product</p>
+		</div><!-- /.img-column -->
+		<p class="ttl-column ttl-column-english txt-fontAlphabet">title from heretitle from heretitle from here</p>
+		<p class="ttl-column ttl-column-japanese txt-fontAlphabet">タイトル入りますタイトル入りますタイトル入ります</p>
+		<p class="txt-columnDate">11  /  8  /  2016</p>
+	</a><!-- /.box-column -->
+</li><!-- /.wp-column -->
 <% } %>
