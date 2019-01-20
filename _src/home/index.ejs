@@ -6,7 +6,7 @@ var setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("
 var pageId = "area-home";
 
 /* cssのファイル名（拡張子は不要。複数ある場合は、『,』で区切って記入） */
-var cssFileName = ["top"];
+var cssFileName = ["home"];
 %>
 <!DOCTYPE html>
 <html lang="ja">
@@ -19,26 +19,19 @@ var cssFileName = ["top"];
 
 <% /* トップ／メインビジュアル */ %>
 <div class="box-mainVisual">
-	<div class="box-mainVisualInr">
-		<img class="img-mainVisual" src="https://ginzamag.com/wp-content/uploads/2018/09/e65e02afd7415a7a3d4127dfba6e0145.jpg" alt="" width="100%" height="">
-		<p class="txt-mainVisualCategory">product</p>
-		<div class="ttl-mainVisual">サンプルのキャプション1</div>
-		<p class="txt-mainVisualDate">2018.10.10</p>
-	</div><!-- /.box-mainVisualInr -->
 	
-	<div class="box-mainVisualInr">
-		<img class="img-mainVisual" src="https://ginzamag.com/wp-content/uploads/2018/09/9277ac0a164146ab6435ef4a295d0a41.jpg" alt="" width="100%" height="">
-		<p class="txt-mainVisualCategory">news</p>
-		<div class="ttl-mainVisual">サンプルのキャプション2</div>
-		<p class="txt-mainVisualDate">2018.10.9</p>
-	</div>
+	<div class="tmb-mainVisual">
+		<div class="tmb-mainVisualInner">
+			<a href="#"><img class="img-mainVisual" src="https://ginzamag.com/wp-content/uploads/2018/09/e65e02afd7415a7a3d4127dfba6e0145.jpg" alt="" width="100%" height=""></a>
+		</div><!-- /.tmb-mainVisualInner -->
+	</div><!-- /.tmb-mainVisual -->
 	
-	<div class="box-mainVisualInr">
-		<img class="img-mainVisual" src="https://ginzamag.com/wp-content/uploads/2018/09/9277ac0a164146ab6435ef4a295d0a41.jpg" alt="" width="100%" height="">
-		<p class="txt-mainVisualCategory">culture</p>
-		<div class="ttl-mainVisual">サンプルのキャプション3</div>
-		<p class="txt-mainVisualDate">2018.10.8</p>
-	</div>
+	<div class="box-articleInfo">
+		<p class="txt-mainVisualCategory txt-fontAlphabet">product</p>
+		<div class="ttl-mainVisual-english txt-fontAlphabet">sample caption sample caption sample caption sample caption sample caption  sample caption  sample caption  sample caption </div>
+		<div class="ttl-mainVisual-japanese">サンプルのキャプションサンプルのキャプションサンプルのキャプションサンプルのキャプションサンプルのキャプション</div>
+		<p class="txt-mainVisualDate">6 / 1 / 2019</p>
+	</div><!-- /.box-articleInfo -->
 </div><!-- /.box-mainVisual -->
 
 <% /* トップ／アバウト */ %>
@@ -73,28 +66,7 @@ var cssFileName = ["top"];
 <%- include(setLayered + "base/footer") %>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="/js/jquery.bxslider.min.js"></script>
 <script src="/js/instafeed.min.js"></script>
 <script src="/js/base.min.js"></script>
-<script>
-	// メインビジュアルの設定
-	$(document).ready(function(){
-		$('.box-mainVisual').bxSlider({
-			mode: "horizontal",
-			auto: true,
-			speed: "500",
-			pause: "3000",
-			infiniteLoop: true,
-			captions: false,
-			responsive: true,
-			touchEnabled: true,
-			pager: true,
-			controls: true,
-			nextText: "次へ",
-			prevText: "前へ",
-			easing: "ease"
-		});
-	});
-</script>
 </body>
 </html>
