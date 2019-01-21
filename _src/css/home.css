@@ -207,7 +207,9 @@
 }
 
 /* ----------【Moreボタン】---------- */
-.wp-detail {
+
+/* PC View */
+.wp-columnDetail {
 	max-width: 2128px;
 	min-width: 980px;
 	margin: 58px auto 0;
@@ -219,12 +221,90 @@
 /* SP View */
 @media screen and (max-width:812px) {
 
-.wp-detail {
+.wp-columnDetail {
 	max-width: unset;
 	min-width: unset;
 	margin: 40px auto 0;
 	padding: 0 20px;
 	text-align: left;
+}
+
+}
+
+/* ----------【アバウト】---------- */
+
+/* PC View */
+.box-about {
+	max-width: 2128px;
+	min-width: 980px;
+	margin: 224px auto 0;
+	padding: 0 64px;
+	box-sizing: border-box;
+}
+
+.box-aboutInner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.ttl-About {
+	font-size: 30px;
+	letter-spacing: .05em;
+	line-height: 1;
+	margin-bottom: 30px;
+}
+
+.txt-about {
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.txt-about-english {
+	margin-bottom: 24px;
+}
+
+.txt-about-japanese {
+	margin-bottom: 40px;
+}
+
+.img-about {
+	width: 60%;
+	overflow-y: hidden;
+}
+
+/* SP View */
+@media screen and (max-width:812px) {
+
+.box-about {
+	max-width: unset;
+	min-width: unset;
+	margin: 64px auto 0;
+	padding: 0 20px;
+}
+
+.box-aboutInner {
+	flex-flow: column;
+}
+
+.ttl-About {
+	font-size: 20px;
+}
+
+.txt-about {
+	font-size: 11px;
+}
+
+.txt-about-english {
+	margin-bottom: 16px;
+}
+
+.txt-about-japanese {
+	margin-bottom: 24px;
+}
+
+.img-about {
+	width: 100%;
+	margin-top: 40px;
 }
 
 }
