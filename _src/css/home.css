@@ -179,6 +179,33 @@
 	margin-top: 40px;
 }
 
+.wp-column:nth-child(1) .box-column {
+	position: relative;
+	
+	&::after {
+		content: "";
+		display: block;
+		width: 1px;
+		height: 185px;
+		background-color: #000;
+		position: absolute;
+		left: 32px;
+		bottom: -250px;
+	}
+}
+
+/* SP View */
+@media screen and (max-width:812px) {
+
+.wp-column:nth-child(1) .box-column {
+	
+	&::after {
+		display: none;
+	}
+}
+
+}
+
 /* ----------【Moreボタン】---------- */
 .wp-detail {
 	max-width: 2128px;
