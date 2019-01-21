@@ -44,21 +44,32 @@ var cssFileName = ["home"];
 	<% /* ボタン */ %>
 	<%- include(setLayered + "btn-detail/btn-detail",{
 		txtDetail: "More",
-		linkDetail: "/column/"
+		linkDetail: "#"
 	}) %>
 </div><!-- /.box-otherColumn -->
 
 <% /* トップ／アバウト */ %>
 <div class="box-about">
-	<dl class="data-about">
-		<dt class="ttl-About">About</dt>
-		<dd class="txt-about txt-about-english">I will input the ABOUT from here.I will input the ABOUT from here.I will input the ABOUT from here.</dd>
-		<dd class="txt-about txt-about-japanese">テキスト入りますテキスト入りますテキスト入りますテキスト入ります</dd>
-	</dl><!-- /.data-about -->
-	
-	<%- include(setLayered + "btn-detail/btn-detail",{
-		linkDetail: "/about/"
-	}) %>
+	<div class="box-aboutInner">
+		<dl class="data-about">
+			<dt class="ttl-About txt-fontAlphabet">About</dt>
+			<dd class="txt-about txt-about-english txt-fontAlphabet">Dunny about writer.　Boyer is ...<br>
+			Dunny about writer.　Boyer is ...</dd>
+			<dd class="txt-about txt-about-japanese">日本語訳入ります日本語訳入ります<br>
+			日本語訳入ります日本語訳入ります</dd>
+			
+			<dd>
+				<%- include(setLayered + "btn-detail/btn-detail",{
+					txtDetail: "More",
+					linkDetail: "#"
+				}) %>
+			</dd>
+		</dl><!-- /.data-about -->
+		
+		<div class="img-about">
+			<img src="https://placehold.jp/240x100.png" alt="" width="100%" height="">
+		</div><!-- /.img-about -->
+	</div><!-- /.box-aboutInner -->
 </div><!-- /.box-About -->
 
 <% /* フッター */ %>
