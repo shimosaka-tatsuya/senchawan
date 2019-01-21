@@ -8,11 +8,12 @@
 .wp-mainVisual {
 	width: 100%;
 	max-width: 2340px;
+	min-width: 980px;
 	margin: 0 auto;
 	transition-property: background-size;
 	transition-duration: .3s;
 	transition-timing-function: ease-in-out;
-/* 	background: url("/img/home/bg-mainvisualDummy.jpg") center top no-repeat; */
+	background: url("/img/home/bg-mainvisualDummy.jpg") center top no-repeat;
 	background-size: 100%;
 }
 
@@ -32,7 +33,7 @@
 	transition-timing-function: ease-in-out;
 	
 	&:hover {
-		opacity: .5;
+		opacity: .8;
 	}
 }
 
@@ -97,7 +98,7 @@
 
 .wp-mainVisual {
 	width: 100%;
-/* 	background: url("/img/home/bg-mainvisualDummy.jpg") center top no-repeat; */
+	background: url("/img/home/bg-mainvisualDummy.jpg") center top no-repeat;
 	background-size: 105%;
 }
 

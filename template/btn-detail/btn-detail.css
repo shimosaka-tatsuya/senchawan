@@ -28,7 +28,7 @@
 	}
 	
 	&:hover {
-		opacity: .5;
+		opacity: .8;
 		
 		&::after {
 			transform: translateX(-3px);
