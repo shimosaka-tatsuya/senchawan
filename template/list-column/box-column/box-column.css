@@ -12,7 +12,7 @@
 	transition-timing-function: ease-in-out;
 	
 	&:hover {
-		opacity: .5;
+		opacity: .8;
 	}
 }
 
