@@ -209,7 +209,7 @@
 /* ----------【Moreボタン】---------- */
 
 /* PC View */
-.wp-detail {
+.wp-columnDetail {
 	max-width: 2128px;
 	min-width: 980px;
 	margin: 58px auto 0;
@@ -221,7 +221,7 @@
 /* SP View */
 @media screen and (max-width:812px) {
 
-.wp-detail {
+.wp-columnDetail {
 	max-width: unset;
 	min-width: unset;
 	margin: 40px auto 0;
@@ -231,7 +231,7 @@
 
 }
 
-/* ----------【Moreボタン】---------- */
+/* ----------【アバウト】---------- */
 
 /* PC View */
 .box-about {
@@ -278,7 +278,7 @@
 .box-about {
 	max-width: unset;
 	min-width: unset;
-	margin: 30px auto 0;
+	margin: 64px auto 0;
 	padding: 0 20px;
 }
 
