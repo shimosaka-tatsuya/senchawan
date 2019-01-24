@@ -21,6 +21,26 @@
 	margin-bottom: 20px;
 }
 
+.img-columnInner {
+	display: block;
+	position: relative;
+	
+	&:before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: #ececec;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	
+	& > img {
+		opacity: 0;
+	}
+}
+
 .txt-columnCategory {
 	position: absolute;
 	bottom: 0;
@@ -32,6 +52,15 @@
 	background-color: #000;
 	color: #fff;
 	font-size: 12px;
+	opacity: 0;
+}
+
+.box-ScrollAnimaton-active .txt-columnCategory {
+	animation-name: fadeInMainVisual;
+	animation-duration: .5s;
+	animation-delay: 1.3s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
 }
 
 .ttl-column {
@@ -39,6 +68,7 @@
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	opacity: 0;
 }
 
 .ttl-column-english {
@@ -55,6 +85,26 @@
 	line-height: 1;
 	font-size: 12px;
 	letter-spacing: .1em;
+	opacity: 0;
+}
+
+@keyframes fadeInColumnTmb {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.box-ScrollAnimaton-active .img-columnInner > img,
+.box-ScrollAnimaton-active .ttl-column,
+.box-ScrollAnimaton-active .txt-columnDate {
+	animation-name: fadeInColumnTmb;
+	animation-duration: 1s;
+	animation-delay: .5s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
 }
 
 /* SP View */
