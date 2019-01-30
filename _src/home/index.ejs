@@ -3,7 +3,7 @@
 var setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("/").length - 1)+"template/";
 
 /* ページID */
-var pageId = "area-home";
+var pageId = "home";
 
 /* cssのファイル名（拡張子は不要。複数ある場合は、『,』で区切って記入） */
 var cssFileName = ["home"];
@@ -12,18 +12,20 @@ var cssFileName = ["home"];
 <html lang="ja">
 <% /* ヘッド（titleやdiscriptionやogなど） */ %>
 <%- include(setLayered + "base/head", { pageId: pageId, cssFileName: cssFileName }) %>
-<body class="<%- pageId  %>">
+<body class="area-<%- pageId  %>">
 
 <% /* ヘッダー */ %>
 <%- include(setLayered + "base/header") %>
+
+<div class="box-content-<%- pageId  %>">
 
 <% /* トップ／メインビジュアル */ %>
 <div class="wp-mainVisual">
 	<div class="box-mainVisual">
 		<a class="box-mainVisualInner" href="#">
-			<img src="https://placehold.jp/1200x720.png" alt="" width="100%" height="">
+			<span class="img-mainVisual"><img src="https://placehold.jp/1200x720.png" alt="" width="100%" height=""></span><!-- /.img-mainVisual -->
 			
-			<div class="box-articleInfo">
+			<div class="box-articleInfo box-ScrollAnimaton">
 				<p class="txt-mainVisualCategory txt-fontAlphabet">product</p>
 				<p class="ttl-mainVisual-english txt-fontAlphabet">sample caption sample caption sample caption sample caption sample caption  sample caption  sample caption  sample caption </p>
 				<p class="ttl-mainVisual-japanese">サンプルのキャプションサンプルのキャプションサンプルのキャプションサンプルのキャプションサンプルのキャプション</p>
@@ -72,11 +74,12 @@ var cssFileName = ["home"];
 	</div><!-- /.box-aboutInner -->
 </div><!-- /.box-About -->
 
+</div><!-- /.box-content-<%- pageId  %> -->
+
 <% /* フッター */ %>
 <%- include(setLayered + "base/footer") %>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="/js/instafeed.min.js"></script>
 <script src="/js/base.min.js"></script>
 </body>
 </html>
