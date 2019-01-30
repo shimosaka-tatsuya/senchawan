@@ -20,9 +20,10 @@ body {
 
 /* PC View */
 .box-header {
-	min-width: 980px;
+	width: 100%;
+	min-width: 1366px;
 	margin: 0 auto;
-	padding: 60px 64px 64px;
+	padding: 56px 60px 62px;
 	box-sizing: border-box;
 	overflow: hidden;
 }
@@ -427,10 +428,10 @@ body {
 
 /* PC View */
 .box-footer {
-	max-width: 2128px;
-    min-width: 980px;
-    margin: 0 auto;
-    padding: 0 64px 50px;
+	width: 100%;
+	min-width: 1366px;
+	margin: 0 auto;
+	padding: 0 64px 50px;
     box-sizing: border-box;
 }
 
@@ -540,8 +541,7 @@ body {
 @media screen and (max-width:812px) {
 
 .box-footer {
-	max-width: unset;
-    min-width: unset;
+	min-width: unset;
     padding: 0 0 32px 0;
 }
 

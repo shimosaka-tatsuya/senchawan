@@ -34,19 +34,23 @@ var cssFileName = ["home"];
 </div><!-- /.box-mainVisual -->
 
 <% /* コラム一覧 */ %>
-<ul class="list-column">
-<%- include(setLayered + "list-column/box-column/box-column", {
-	loopNum: 3
-}) %>
-</ul><!-- /.list-column -->
+<div class="wp-column">
+	<ul class="list-column">
+	<%- include(setLayered + "list-column/box-column/box-column", {
+		loopNum: 3
+	}) %>
+	</ul><!-- /.list-column -->
+</div><!-- /.wp-column -->
 
 <div class="wp-columnDetail">
+	<div class="box-columnDetail">
 	<% /* ボタン */ %>
 	<%- include(setLayered + "btn-detail/btn-detail",{
 		txtDetail: "More",
 		linkDetail: "#"
 	}) %>
-</div><!-- /.box-otherColumn -->
+	</div><!-- /.box-columnDetail -->
+</div><!-- /.wp-columnDetail -->
 
 <% /* トップ／アバウト */ %>
 <div class="box-about">
