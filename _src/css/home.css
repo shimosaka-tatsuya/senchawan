@@ -2,6 +2,20 @@
 @import "./../../template/list-column/list-column";
 @import "./../../template/list-column/box-column/box-column";
 
+/* PC View */
+.box-content-home {
+	padding-bottom: 238px;
+}
+
+/* SP View */
+@media screen and (max-width:812px) {
+
+.box-content-home {
+	padding-bottom: 55px;
+}
+
+}
+
 /* ----------【メインビジュアル】---------- */
 
 /* PC View - Large */

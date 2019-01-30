@@ -3,7 +3,7 @@
 var setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("/").length - 1)+"template/";
 
 /* ページID */
-var pageId = "area-home";
+var pageId = "home";
 
 /* cssのファイル名（拡張子は不要。複数ある場合は、『,』で区切って記入） */
 var cssFileName = ["home"];
@@ -12,10 +12,12 @@ var cssFileName = ["home"];
 <html lang="ja">
 <% /* ヘッド（titleやdiscriptionやogなど） */ %>
 <%- include(setLayered + "base/head", { pageId: pageId, cssFileName: cssFileName }) %>
-<body class="<%- pageId  %>">
+<body class="area-<%- pageId  %>">
 
 <% /* ヘッダー */ %>
 <%- include(setLayered + "base/header") %>
+
+<div class="box-content-<%- pageId  %>">
 
 <% /* トップ／メインビジュアル */ %>
 <div class="wp-mainVisual">
@@ -71,6 +73,8 @@ var cssFileName = ["home"];
 		</div><!-- /.img-about -->
 	</div><!-- /.box-aboutInner -->
 </div><!-- /.box-About -->
+
+</div><!-- /.box-content-<%- pageId  %> -->
 
 <% /* フッター */ %>
 <%- include(setLayered + "base/footer") %>
