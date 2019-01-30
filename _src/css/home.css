@@ -18,28 +18,20 @@
 
 /* ----------【メインビジュアル】---------- */
 
-/* PC View - Large */
-.wp-mainVisual {
+/* PC View */
+.box-mainVisual {
 	width: 100%;
-	max-width: 2340px;
-	min-width: 980px;
+	max-width: 1428px;
 	margin: 0 auto;
-	transition-property: background-size;
-	transition-duration: .3s;
-	transition-timing-function: ease-in-out;
 	background: url("/img/home/bg-mainvisualDummy.jpg") center top no-repeat;
 	background-size: 100%;
 }
 
-.box-mainVisual {
-	max-width: 2128px;
+.box-mainVisualInner {
+	width: calc(100% - 128px);
+	max-width: 1200px;
 	min-width: 980px;
 	margin: 0 auto;
-	padding: 0 64px;
-	box-sizing: border-box;
-}
-
-.box-mainVisualInner {
 	display: block;
 	text-decoration: none;
 	transition-property: opacity;
@@ -159,17 +151,6 @@
 	margin-top: 24px;
 	letter-spacing: .1em;
 	color: #000;
-}
-
-/* PC View - Small */
-@media screen and (max-width:2328px) {
-
-.wp-mainVisual {
-	width: 100%;
-	background: url("/img/home/bg-mainvisualDummy.jpg") center top no-repeat;
-	background-size: 105%;
-}
-
 }
 
 /* SP View */
