@@ -1,5 +1,5 @@
 /* PC View */
-.wp-column {
+.item-column {
 	width: calc((100% / 3) - 50px);
 }
 
@@ -110,7 +110,7 @@
 /* SP View */
 @media screen and (max-width:812px) {
 
-.wp-column {
+.item-column {
 	width: 100%;
 	margin-top: 50px;
 	
