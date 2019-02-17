@@ -1,0 +1,17 @@
+/* PC View */
+.ttl-pageHead {
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 1;
+	text-align: center;
+	margin-bottom: 60px;
+	letter-spacing: .05em;
+}
+
+/* SP View */
+@media screen and (max-width:812px) {
+	.ttl-pageHead {
+		font-size: 25px;
+		margin: 28px 0 32px 0;
+	}
+}
