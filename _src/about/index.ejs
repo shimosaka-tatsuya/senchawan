@@ -12,71 +12,62 @@ var cssFileName = ["about"];
 <html lang="ja">
 <%/* ヘッド（titleやdiscriptionやogなど） */ %>
 <%- include(setLayered + "base/head", { pageId: pageId, cssFileName: cssFileName }) %>
-<body class="pageId">
+<body class="area-<%- pageId %>">
 
 <%/* ヘッダー */ %>
 <%- include(setLayered + "base/header") %>
 
-<%/* パンくず */ %>
-<%- include(setLayered + "list-breadcrumb/list-breadcrumb", {
-	listBreadcrumb: [
-		{
-			txtBreadcrumb: 'top',
-			linkBreadcrumb: 'link-top'	
-		},
-		{
-			txtBreadcrumb: 'about',
-			linkBreadcrumb: 'link-about'	
-		}
-	]
-}) %>
-
-<h1 class="img-mainVisual">
-	<img src="https://placehold.jp/1200x630.png" alt="アバウトの見出し" width="100%" height="" >
-</h1><!-- /.img-mainVisual -->
+<div class="box-content-<%- pageId  %>">
 
 <%/* 各ページ／見出し */ %>
 <%- include(setLayered + "ttl-pageHead/ttl-pageHead", {
-	ttlPageHead: "concept",
-	htmlTag: "h2"
+	ttlPageHead: "About",
+	htmlTag: "h1"
 }) %>
 
-<p class="txt-conceptEnglish">I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
-	I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
-	I will input the CONCEPT from here.I will input the CONCEPT from here.</p><!-- /.txt-conceptEnglish -->
-
-<%/* 各ページ／見出し */ %>
-<%- include(setLayered + "ttl-pageHead/ttl-pageHead", {
-	ttlPageHead: "コンセプト入ります",
-	htmlTag: "h2"
-}) %>
-
-<p class="txt-conceptJapanese">テキスト入りますテキスト入ります<br>
-	テキスト入りますテキスト入りますテキスト入りますテキスト入ります<br>
-	テキスト入りますテキスト入りますテキスト入りますテキスト入ります<br>
-	テキスト入りますテキスト入ります</p><!-- /.txt-conceptJapanese -->
-
-<div class="box-profile">
-	<div class="txt-profile">
-		<h3 class="ttl-profile">profile</h3>
+	<div class="box-description">
+		<h2 class="ttl-description txt-fontAlphabet">What is “q”</h2>
 	
-		<p class="txt-profileCaptionEnglish">I will input the profile from here.<br>
-			I will input the profile from here.<br>
-			I will input the profile from here.</p><!-- /.txt-profileEnglish -->
+		<p class="txt-About">I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
+			I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
+			I will input the CONCEPT from here.I will input the CONCEPT from here.</p>
+			
+		<p class="txt-About">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+			テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+			テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p>
+	</div><!-- /.box-description -->
 		
-		<p class="txt-profileCaptionJapanese">テキスト入りますテキスト入ります<br>
-			テキスト入りますテキスト入りますテキスト入ります<br>
-			テキスト入りますテキスト入ります</p><!-- /.txt-profileJapanese -->
-	</div><!-- /.txt-profile -->
+	<div class="box-description">
+		<h2 class="ttl-description">What is “KUTANI”</h2>
 	
-	<img class="img-profile" src="https://placehold.jp/200x300.png" alt="アバウトの見出し" width="200" height="300" >
-	
-</div><!-- /.box-profile -->
+		<p class="txt-About txt-About--English">I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
+			I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
+			I will input the CONCEPT from here.I will input the CONCEPT from here.</p><!-- /.txt-About--English -->
+			
+		<p class="txt-About txt-About--Japanese">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+			テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+			テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p><!-- /.txt-About--Japanese -->
+	</div><!-- /.box-description -->
 
-<%- include(setLayered + "btn-detail/btn-detail",{
-	linkDetail: "/",
-	txtDetail: "トップへ戻る"
-}) %>
+	<div class="box-writer">
+		<h2 class="ttl-description">What is “KUTANI”</h2>
+		
+		<div class="box-writerInfo">
+			<p class="txt-About txt-About--English">I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
+				I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
+				I will input the CONCEPT from here.I will input the CONCEPT from here.</p><!-- /.txt-About--English -->
+				
+			<p class="txt-About txt-About--Japanese">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+				テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+				テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p><!-- /.txt-About--Japanese -->
+		</div><!-- /.box-writerInfo -->
+		
+		<div class="img-writer">
+			<img src="https://placehold.jp/240x100.png" alt="" width="100%" height="">
+		</div>
+	</div><!-- /.box-writer -->
+
+</div><!-- /.box-content-<%- pageId  %> -->
 
 <!-- フッター -->
 <%- include(setLayered + "base/footer") %>

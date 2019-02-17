@@ -17,20 +17,6 @@ var cssFileName = ["list-column"];
 <% /* ヘッダー */ %>
 <%- include(setLayered + "base/header") %>
 
-<% /* パンくず */ %>
-<%- include(setLayered + "list-breadcrumb/list-breadcrumb", {
-	listBreadcrumb: [
-		{
-			txtBreadcrumb: 'top',
-			linkBreadcrumb: 'link-top'	
-		},
-		{
-			txtBreadcrumb: 'column',
-			linkBreadcrumb: 'link-column'	
-		}
-	]
-}) %>
-
 <% /* 各ページ／見出し */ %>
 <%- include(setLayered + "ttl-pageHead/ttl-pageHead", {
 	ttlPageHead: "コラム一覧"

@@ -65,28 +65,6 @@ var cssFileName = ["sample"];
 <!-- フッター -->
 <%- include(setLayered + "base/footer") %>
 
-<!-- パンくず -->
-<%- include(setLayered + "list-breadcrumb/list-breadcrumb", {
-	listBreadcrumb: [
-		{
-			txtBreadcrumb: 'top',
-			linkBreadcrumb: 'link-top'	
-		},
-		{
-			txtBreadcrumb: 'about',
-			linkBreadcrumb: 'link-about'	
-		},
-		{
-			txtBreadcrumb: 'hogehoge',
-			linkBreadcrumb: 'link-hogehoge'	
-		},
-		{
-			txtBreadcrumb: 'テキスト入りますテキスト入りますテキスト入りますテキスト入ります',
-			linkBreadcrumb: ''	
-		}
-	]
-}) %>
-
 <!-- 各ページ／見出し -->
 <%- include(setLayered + "ttl-pageHead/ttl-pageHead", {
 	ttlPageHead: "コラム一覧"
