@@ -1,6 +1,11 @@
 /* PC View */
 .item-column {
 	width: calc((100% / 3) - 50px);
+	margin-top: 60px;
+	
+	&:nth-child(-n+3) {
+		margin-top: 0;
+	}
 }
 
 .box-column {
@@ -55,8 +60,17 @@
 	opacity: 0;
 }
 
+@keyframes fadeInColumnCategory {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 .box-ScrollAnimaton-active .txt-columnCategory {
-	animation-name: fadeInMainVisual;
+	animation-name: fadeInColumnCategory;
 	animation-duration: .5s;
 	animation-delay: 1.3s;
 	animation-timing-function: ease;

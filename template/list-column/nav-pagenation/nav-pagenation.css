@@ -1,0 +1,49 @@
+.nav-links {
+	text-align: center;
+	font-size: 0;
+	margin: 146px 0 164px;
+	
+	& > .page-numbers {
+		color: #000;
+		font-size: 20px;
+		line-height: 1;
+		text-decoration: none;
+		display: inline-block;
+		margin-right: 78px;
+		position: relative;
+		
+		&.prev {
+			margin-right: 48px
+		}
+		
+		&.next {
+			margin-left: -30px
+		}
+		
+		&:before {
+			content: "";
+			display: block;
+			width: 1px;
+			height: 16px;
+			background-color: #bdbdbd;
+			transform: rotate(14deg);
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: -36px;
+			margin: auto;
+		}
+		
+		&:first-child,
+		&.next,
+		&.prev + .page-numbers {
+			&:before {
+				content: unset;
+			}
+		}
+		
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

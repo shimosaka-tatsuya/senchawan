@@ -1,0 +1,32 @@
+@import "./../../template/ttl-pageHead/ttl-pageHead";
+@import "./../../template/list-column/list-column-navigation/list-column-navigation";
+@import "./../../template/list-column/list-column";
+@import "./../../template/list-column/box-column/box-column";
+@import "./../../template/list-column/nav-pagenation/nav-pagenation";
+
+/* PC View */
+.box-archiveInr {
+	width: 100%;
+	min-width: 1366px;
+	margin: 0 auto;
+	padding: 0 60px 0;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.ttl-pageHead {
+	margin-bottom: 100px;
+}
+
+/* SP View */
+@media screen and (max-width:812px) {
+	.box-archiveInr {
+		min-width: unset;
+		padding: 0;
+	}
+	
+	.ttl-pageHead {
+		margin-bottom: 50px;
+	}
+	
+}
