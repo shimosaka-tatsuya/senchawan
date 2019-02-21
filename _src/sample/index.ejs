@@ -70,28 +70,6 @@ var cssFileName = ["sample"];
 	ttlPageHead: "コラム一覧"
 }) %>
 
-<!-- コラム一覧／カテゴリーナビゲーション -->
-<%- include(setLayered + "list-column/list-column-navigation/list-column-navigation", {
-	navCategory: [
-		{
-			txtCategory: "全記事",
-			linkCategory: "category-all"		
-		},
-		{
-			txtCategory: "カルチャー",
-			linkCategory: "category-culture"		
-		},
-		{
-			txtCategory: "ニュース",
-			linkCategory: "category-news"		
-		},
-		{
-			txtCategory: "プロダクト",
-			linkCategory: "category-product"		
-		}
-	]
-}) %>
-
 <!-- コラム一覧／ページネーション -->
 <%- include(setLayered + "list-column/nav-pagenation/nav-pagenation") %>
 
