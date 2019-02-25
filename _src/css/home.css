@@ -22,7 +22,6 @@
 .box-mainVisual {
 	width: 100%;
 	max-width: 1420px;
-	min-width: 1366px;
 	margin: 0 auto;
 	background: url("/img/home/bg-mainvisualDummy.jpg") center top no-repeat;
 	background-size: 102%;
@@ -161,7 +160,6 @@
 
 .box-mainVisual {
 	max-width: unset;
-	min-width: unset;
 /* 	background: url("/img/home/bg-mainvisualDummy.jpg") center top no-repeat; */
 /* 	background-size: 100%; */
 }
@@ -231,7 +229,6 @@
 .wp-column {
 	width: 100%;
 	max-width: 1420px;
-	min-width: 1366px;
 	margin: 0 auto;
 }
 
@@ -272,7 +269,6 @@
 
 .wp-column {
 	max-width: unset;
-	min-width: unset;
 }
 
 .item-column:nth-child(1) .box-column {
@@ -290,7 +286,6 @@
 .wp-columnDetail {
 	width: 100%;
 	max-width: 1420px;
-	min-width: 1366px;
 	margin: 58px auto 0;
 	text-align: right;
 }
@@ -329,7 +324,6 @@
 .box-about {
 	width: 100%;
 	max-width: 1420px;
-	min-width: 1366px;
 	margin: 224px auto 0;
 }
 
