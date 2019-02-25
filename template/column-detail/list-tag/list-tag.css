@@ -1,0 +1,47 @@
+/* PC View */
+.list-tag {
+	margin: 100px 0 30px;
+	line-height: 1.6;
+}
+
+.item-tag {
+	display: inline-block;
+	margin-right: 20px;
+	
+	&::before {
+		content: "#";
+		display: inline-block;
+		margin-right: 2px;
+	}
+	
+	& > a {
+		color: #000;
+		text-decoration: none;
+	}
+}
+
+/* SP View */
+@media screen and (max-width:812px) {
+
+	.list-tag {
+		width: calc(100% - 40px);
+		margin: 55px auto 0;
+	}
+	
+	.item-tag {
+		display: inline-block;
+		margin-right: 20px;
+		
+		&::before {
+			content: "#";
+			display: inline-block;
+			margin-right: 2px;
+		}
+		
+		& > a {
+			color: #000;
+			text-decoration: none;
+		}
+	}
+	
+}

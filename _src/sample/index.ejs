@@ -70,28 +70,6 @@ var cssFileName = ["sample"];
 	ttlPageHead: "コラム一覧"
 }) %>
 
-<!-- コラム一覧／カテゴリーナビゲーション -->
-<%- include(setLayered + "list-column/list-column-navigation/list-column-navigation", {
-	navCategory: [
-		{
-			txtCategory: "全記事",
-			linkCategory: "category-all"		
-		},
-		{
-			txtCategory: "カルチャー",
-			linkCategory: "category-culture"		
-		},
-		{
-			txtCategory: "ニュース",
-			linkCategory: "category-news"		
-		},
-		{
-			txtCategory: "プロダクト",
-			linkCategory: "category-product"		
-		}
-	]
-}) %>
-
 <!-- コラム一覧／ページネーション -->
 <%- include(setLayered + "list-column/nav-pagenation/nav-pagenation") %>
 
@@ -101,17 +79,6 @@ var cssFileName = ["sample"];
 	ttlColumnJapanese: "タイトル入ります",
 	txtColumnDate: "2018.01.01",
 	txtColumnCategory: "プロダクト"
-}) %>
-
-<!-- コラム詳細／メインコンテンツ -->
-<%- include(setLayered + "column-detail/box-columnMain/box-columnMain", {
-	imgColumnMain: "http://senchawan.local/wp-content/uploads/2018/09/1200x630-1-1.png",
-	ttlColumnMainEnglish: "text from here",
-	txtColumnMainEnglish: "text from here.text from here.text from here.text from here.text from here.<br>text from here.text from here.text from here.text from here.text from here.text from here.<br>text from here.text from here.text from here.text from here.text from here.",
-	txtColumnCaptionEnglish: "text from here.text from here.text from here.text from here.text from here.<br>text from here.text from here.text from here.text from here.text from here.",
-	ttlColumnMainjapanese: "テキスト入ります",
-	txtColumnMainjapanese: "テキスト入りますテキスト入ります<br>テキスト入りますテキスト入りますテキスト入りますテキスト入ります<br>テキスト入りますテキスト入りますテキスト入りますテキスト入ります<br>テキスト入りますテキスト入ります",
-	txtColumnCaptionjapanese: "テキスト入りますテキスト入ります<br>テキスト入りますテキスト入りますテキスト入りますテキスト入ります<br>テキスト入りますテキスト入ります"
 }) %>
 
 <!-- コラム詳細／タグ -->

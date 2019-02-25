@@ -1,0 +1,67 @@
+<%
+/* 相対パスを取得 */
+var setLayered = ("../").repeat(filename.slice(filename.indexOf("_src")).split("/").length - 1)+"template/";
+
+/* ページID */
+var pageId = "archive";
+
+/* cssのファイル名（拡張子は不要。複数ある場合は、『,』で区切って記入） */
+var cssFileName = ["archive"];
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<% /* ヘッド（titleやdiscriptionやogなど） */ %>
+<%- include(setLayered + "base/head", { pageId: pageId, cssFileName: cssFileName }) %>
+<body class="area-<%- pageId %>">
+
+<% /* ヘッダー */ %>
+<%- include(setLayered + "base/header") %>
+
+<div class="box-<%- pageId %>Inr">
+
+	<% /* 各ページ／見出し */ %>
+	<%- include(setLayered + "ttl-pageHead/ttl-pageHead", {
+		ttlPageHead: "Archive"
+	}) %>
+	
+	<nav class="wp-columnNavigation">
+		<div class="list-columnNavigation list-columnNavigation-all">
+			<div class="btn-columnNavigation btn-columnNavigation-all txt-fontAlphabet">
+				<a href="#">All</a>
+			</div>
+			
+			<div class="btn-columnNavigation btn-columnNavigation-culture txt-fontAlphabet">
+				<a href="#">culture</a>
+			</div>
+			
+			<div class="btn-columnNavigation btn-columnNavigation-news txt-fontAlphabet">
+				<a href="#">news</a>
+			</div>
+			
+			<div class="btn-columnNavigation btn-columnNavigation-product txt-fontAlphabet">
+				<a href="#">product</a>
+			</div>
+			
+			<span class="ico-columnNavigation"></span>
+		</div><!-- /.list-columnNavigation -->
+	</nav><!-- /.wp-columnNavigation -->
+	
+	<% /* コラム一覧 */ %>
+	<ul class="list-column">
+	<%- include(setLayered + "list-column/box-column/box-column", {
+		loopNum: 12
+	}) %>
+	</ul><!-- /.list-column -->
+	
+	<% /* コラム一覧／ページネーション */ %>
+	<%- include(setLayered + "list-column/nav-pagenation/nav-pagenation") %>
+
+</div><!-- /.box-<%- pageId %>Inr -->
+
+<% /* フッター */ %>
+<%- include(setLayered + "base/footer") %>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="/js/base.min.js"></script>
+</body>
+</html>

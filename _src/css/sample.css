@@ -1,8 +1,6 @@
 @import "./../../template/btn-detail/btn-detail";
 @import "./../../template/list-column/box-column/box-column";
 @import "./../../template/ttl-pageHead/ttl-pageHead";
-@import "./../../template/list-column/list-column-navigation/list-column-navigation";
 @import "./../../template/list-column/nav-pagenation/nav-pagenation";
 @import "./../../template/column-detail/box-columnHead/box-columnHead";
-@import "./../../template/column-detail/box-columnMain/box-columnMain";
 @import "./../../template/column-detail/list-tag/list-tag";
