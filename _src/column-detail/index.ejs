@@ -12,68 +12,67 @@ var cssFileName = ["column-detail"];
 <html lang="ja">
 <% /* ヘッド（titleやdiscriptionやogなど） */ %>
 <%- include(setLayered + "base/head", { pageId: pageId, cssFileName: cssFileName }) %>
-<body class="pageId">
+<body class="area-<%- pageId  %>">
 
 <% /* ヘッダー */ %>
 <%- include(setLayered + "base/header") %>
 
-<% /* コラム詳細／見出し・メタ情報 */ %>
-<%- include(setLayered + "column-detail/box-columnHead/box-columnHead", {
-	ttlColumnEnglish: "title from here",
-	ttlColumnJapanese: "タイトル入ります",
-	txtColumnDate: "2018.01.01",
-	txtColumnCategory: "プロダクト"
-}) %>
+<div class="box-content-<%- pageId  %>">
 
-<% /* コラム詳細／メインコンテンツ */ %>
-<%- include(setLayered + "column-detail/box-columnMain/box-columnMain", {
-	imgColumnMain: "http://senchawan.local/wp-content/uploads/2018/09/1200x630-1-1.png",
-	ttlColumnMainEnglish: "text from here",
-	txtColumnMainEnglish: "text from here.text from here.text from here.text from here.text from here.<br>text from here.text from here.text from here.text from here.text from here.text from here.<br>text from here.text from here.text from here.text from here.text from here.",
-	txtColumnCaptionEnglish: "text from here.text from here.text from here.text from here.text from here.<br>text from here.text from here.text from here.text from here.text from here.",
-	ttlColumnMainjapanese: "テキスト入ります",
-	txtColumnMainjapanese: "テキスト入りますテキスト入ります<br>テキスト入りますテキスト入りますテキスト入りますテキスト入ります<br>テキスト入りますテキスト入りますテキスト入りますテキスト入ります<br>テキスト入りますテキスト入ります",
-	txtColumnCaptionjapanese: "テキスト入りますテキスト入ります<br>テキスト入りますテキスト入りますテキスト入りますテキスト入ります<br>テキスト入りますテキスト入ります"
-}) %>
+	<% /* コラム詳細／見出し・メタ情報 */ %>
+	<%- include(setLayered + "column-detail/box-columnHead/box-columnHead", {
+		ttlColumnEnglish: "title from here.title from here.title from here.title from here.title from here.title from here.title from here.title from here.title from here.title from here.title from here.",
+		ttlColumnJapanese: "タイトル入ります。タイトル入ります。タイトル入ります。タイトル入ります。タイトル入ります。タイトル入ります。タイトル入ります。タイトル入ります。タイトル入ります。タイトル入ります。タイトル入ります。",
+		txtColumnDate: "11  /  8  /  2016",
+		txtColumnCategory: "culture"
+	}) %>
+	
+	<% /* コラム詳細／メインコンテンツ */ %>
+	<div class="box-columnMain">
+		
+		<img class="img-columnMainThumbnail" src="https://placehold.jp/1200x720.png" alt="" width="100%" height="">
+		
+		<p><strong>What is “q”</strong></p>
+			
+		<p>dummy text.dummy text.dummy text.dummy text.dummy text.dummy text.dummy text.<br>
+			dummy text.dummy text.dummy text.dummy text.dummy text.dummy text.dummy text.<br>
+			dummy text.dummy text.dummy text.dummy text.dummy text.<br>
+			dummy text.dummy text.dummy text.dummy text.dummy text.dummy text.</p>
+			
+		<p>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+			テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+			テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p>
+	
+	</div><!-- /.box-columnMain -->
+	
+	<% /* コラム詳細／タグ */ %>
+	<%- include(setLayered + "column-detail/list-tag/list-tag", {
+		listTag: [
+			{
+				txtListTag: 'インタビュー',
+				linkListTag: 'tag-interview'	
+			},
+			{
+				txtListTag: 'デザイン',
+				linkListTag: 'tag-design'	
+			},
+			{
+				txtListTag: '九谷焼',
+				linkListTag: 'tag-kutaniyaki'	
+			},
+			{
+				txtListTag: '作法',
+				linkListTag: 'tag-sahou'	
+			},
+			{
+				txtListTag: '歴史',
+				linkListTag: 'tag-rekishi'	
+			}
+		]
+	}) %>
+	</ul><!-- /.list-column -->
 
-<% /* コラム詳細／タグ */ %>
-<%- include(setLayered + "column-detail/list-tag/list-tag", {
-	listTag: [
-		{
-			txtListTag: 'インタビュー',
-			linkListTag: 'tag-interview'	
-		},
-		{
-			txtListTag: 'デザイン',
-			linkListTag: 'tag-design'	
-		},
-		{
-			txtListTag: '九谷焼',
-			linkListTag: 'tag-kutaniyaki'	
-		},
-		{
-			txtListTag: '作法',
-			linkListTag: 'tag-sahou'	
-		},
-		{
-			txtListTag: '歴史',
-			linkListTag: 'tag-rekishi'	
-		}
-	]
-}) %>
-
-<% /* 各ページ／見出し */ %>
-<%- include(setLayered + "ttl-pageHead/ttl-pageHead", {
-	ttlPageHead: "関連記事",
-	htmlTag: "h2"
-}) %>
-
-<% /* コラム一覧 */ %>
-<ul class="list-column">
-<%- include(setLayered + "list-column/box-column/box-column", {
-	loopNum: 6
-}) %>
-</ul><!-- /.list-column -->
+</div><!-- box-content-<%- pageId  %> -->
 
 <% /* フッター */ %>
 <%- include(setLayered + "base/footer") %>
