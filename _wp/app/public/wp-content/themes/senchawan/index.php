@@ -53,7 +53,7 @@
 
 <div class="wp-columnDetail">
 	<div class="box-columnDetail">
-		<a class="btn-detail txt-fontAlphabet" href="#">More</a>
+		<a class="btn-detail txt-fontAlphabet" href="/column/">More</a>
 	</div><!-- /.box-columnDetail -->
 </div><!-- /.wp-columnDetail -->
 
@@ -66,7 +66,7 @@
 			<dd class="txt-about txt-about-japanese">日本語訳入ります日本語訳入ります<br>
 			日本語訳入ります日本語訳入ります</dd>
 			<dd>
-				<a class="btn-detail txt-fontAlphabet" href="#">More</a>
+				<a class="btn-detail txt-fontAlphabet" href="/about/">More</a>
 			</dd>
 		</dl><!-- /.data-about -->
 		

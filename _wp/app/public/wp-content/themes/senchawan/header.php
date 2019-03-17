@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<?php wp_deregister_script( 'jquery' ); // wordpress固有のjQueyの読み込みを拒否 ?>
+<?php wp_head(); ?>
 
-<link rel="stylesheet" type="text/css" href="/css/base.min.css">
 <?php // ▼スタイル ?>
 <?php if (is_home() && !is_paged()) { // トップページ ?>
 <link rel="stylesheet" type="text/css" href="/css/home.min.css">
@@ -15,6 +14,9 @@
 <?php } else if( is_single() ) { // 記事ページ ?>
 <link rel="stylesheet" type="text/css" href="/css/column-detail.min.css">
 <?php } ?>
+
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <?php // ▼ディスクリプション ?>
 <?php if (is_home() && !is_paged()) { // トップページ ?>
 <meta name="description" content="ダミーダミートップのディスクリプション。">
@@ -63,10 +65,7 @@
 <meta property="og:type" content="article">
 <meta property="fb:app_id" content="サンプルID">
 <meta property="og:locale" content="ja_JP" />
-<?php // wordpressのデフォルトの記述
-	wp_deregister_script( 'jquery' ); 
-	wp_head();
-?>
+<link rel="stylesheet" type="text/css" href="/css/base.min.css">
 </head>
 <?php // ▼bodyタグ ?>
 <?php if (is_home() && !is_paged()) { // トップページ ?>
@@ -80,7 +79,7 @@
 <?php } ?>
 <header class="box-header">
 	<div class="box-siteSymbol">
-		<a class="box-siteLogo" href="#"><img src="/img/common/img-logoQ.png" alt="陶芸作家見習いであるテオドール・ボワイエが運営するWEBメディア『q』のロゴ" width="100%" height="" /></a><!-- /.box-siteLogo -->
+		<a class="box-siteLogo" href="/"><img src="/img/common/img-logoQ.png" alt="陶芸作家見習いであるテオドール・ボワイエが運営するWEBメディア『q』のロゴ" width="100%" height="" /></a><!-- /.box-siteLogo -->
 		
 		<p class="txt-outLineSite txt-fontAlphabet">I have questions about Kutani.<br>
 			Dummy I have questions about Kutani.<br>
@@ -137,7 +136,7 @@
 			
 			<?php // <nav class="box-headerMetaNavigation"><a class="txt-headerMetaNavigation-policy txt-fontAlphabet" href="#">Privacy policy</a></nav> ?>
 			
-			<p class="txt-copyright txt-fontAlphabet">Copyright©<?php echo date("Y"); ?> q. All Rights Reserved.</p>
+			<p class="txt-copyright txt-fontAlphabet">Copyright&#169;<?php echo date("Y"); ?> q. All Rights Reserved.</p>
 		</div><!-- /.box-headerMeta -->
 
 	</nav><!-- /.box-globalNavigation -->
