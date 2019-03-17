@@ -39,29 +39,41 @@
   );
   $st_query = new WP_Query( $args );
 ?>
-<ul class="list-newColumn">
-<?php if ( $st_query->have_posts() ): ?>
-	<?php while ( $st_query->have_posts() ) : $st_query->the_post(); ?>
+<div class="wp-column">
+	<ul class="list-column">
+	<?php if ( $st_query->have_posts() ): ?>
+		<?php while ( $st_query->have_posts() ) : $st_query->the_post(); ?>
+		<?php get_template_part( 'template-parts/list-column/box-column', get_post_format() ); // コラム ?>	
+		<?php endwhile; ?>
+		<?php else: ?>
+		<li class="box-newColumn-none">新しい記事はありません</li><!-- /.box-newColumn-none -->
+	<?php endif; ?>
+	</ul><!-- /.list-column -->
+</div><!-- /.wp-column -->
 
-	<?php // コラム ?>
-	<?php get_template_part( 'template-parts/list-column/box-column', get_post_format() ); ?>
-
-	<?php endwhile; ?>
-	<?php else: ?>
-	<li class="box-newColumn-none">新しい記事はありません</li><!-- /.box-newColumn-none -->
-<?php endif; ?>
-</ul><!-- /.list-newColumn -->
-
-<a class="btn-detail" href="/column/">コラムをもっと見る</a>
+<div class="wp-columnDetail">
+	<div class="box-columnDetail">
+		<a class="btn-detail txt-fontAlphabet" href="#">More</a>
+	</div><!-- /.box-columnDetail -->
+</div><!-- /.wp-columnDetail -->
 
 <div class="box-about">
-	<dl class="data-about">
-		<dt class="ttl-About">About</dt>
-		<dd class="txt-about txt-about-english">I will input the ABOUT from here.I will input the ABOUT from here.I will input the ABOUT from here.</dd>
-		<dd class="txt-about txt-about-japanese">テキスト入りますテキスト入りますテキスト入りますテキスト入ります</dd>
-	</dl><!-- /.data-about -->
-	
-	<a class="btn-detail" href="/about/">詳細を見る</a>
+	<div class="box-aboutInner">
+		<dl class="data-about">
+			<dt class="ttl-About txt-fontAlphabet">About</dt>
+			<dd class="txt-about txt-about-english txt-fontAlphabet">Dunny about writer.　Boyer is ...<br>
+			Dunny about writer.　Boyer is ...</dd>
+			<dd class="txt-about txt-about-japanese">日本語訳入ります日本語訳入ります<br>
+			日本語訳入ります日本語訳入ります</dd>
+			<dd>
+				<a class="btn-detail txt-fontAlphabet" href="#">More</a>
+			</dd>
+		</dl><!-- /.data-about -->
+		
+		<div class="img-about">
+			<img src="https://placehold.jp/240x100.png" alt="" width="100%" height="">
+		</div><!-- /.img-about -->
+	</div><!-- /.box-aboutInner -->
 </div><!-- /.box-About -->
 
 </div><!-- /.box-content-home -->
