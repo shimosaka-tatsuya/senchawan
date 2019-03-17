@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<div class="box-content-home">
+
 <!-- 最新記事1件を取得 -->
 <?php
   $args = array(
@@ -8,36 +10,25 @@
   );
   $st_query = new WP_Query( $args );
 ?>
+
 <div class="box-mainVisual">
 <?php if ( $st_query->have_posts() ): ?>
 	<?php while ( $st_query->have_posts() ) : $st_query->the_post(); ?>
-	<div class="box-mainVisualInr">
-		<a href="<?php the_permalink(); ?>">
-			<img class="img-mainVisual" src="<?php $eye_img = wp_get_attachment_image_src( get_post_thumbnail_id() , 'large' ); print_r($eye_img[0]); ?>" alt="『<?php the_title(); ?>』のサムネイル / thumbnail of '<?php the_field('ttlColumnEnglish'); ?>'" width="100%" height="">
-			
-			<p class="txt-mainVisualCategory"><?php echo get_cat_name(get_the_category()[0]->term_id); ?></p>
-			
-			<p class="ttl-mainVisual-english"><?php the_field('ttlColumnEnglish'); ?></p>
-			
+	<a class="box-mainVisualInner" href="<?php the_permalink(); ?>">
+		<span class="img-mainVisual"><img src="<?php $eye_img = wp_get_attachment_image_src( get_post_thumbnail_id() , 'large' ); print_r($eye_img[0]); ?>" alt="『<?php the_title(); ?>』のサムネイル / thumbnail of '<?php the_field('ttlColumnEnglish'); ?>'" width="100%" height=""></span><!-- /.img-mainVisual -->
+		
+		<div class="box-articleInfo box-ScrollAnimaton">
+			<p class="txt-mainVisualCategory txt-fontAlphabet"><?php echo get_cat_name(get_the_category()[0]->term_id); ?></p>
+			<p class="ttl-mainVisual-english txt-fontAlphabet"><?php the_field('ttlColumnEnglish'); ?></p>
 			<p class="ttl-mainVisual-japanese"><?php the_title(); ?></p>
-		</a>
-		<p class="txt-mainVisualDate"><?php the_time('Y.m.d'); ?></p>
-	</div><!-- /.box-mainVisualInr -->
+			<p class="txt-mainVisualDate"><?php the_time('Y.m.d'); ?></p>
+		</div>
+	</a>
 	<?php endwhile; ?>
 	<?php else: ?>
-	<div class="box-mainVisualInr">
-		<a href="<?php the_permalink(); ?>">
-			<img class="img-mainVisual" src="/img/dummy.jpg" alt="ダミーのサムネイル" width="100%" height="">
-			
-			<p class="ttl-mainVisual-english">There is no new article</p>
-			
-			<p class="ttl-mainVisual-japanese">新しい記事はありません</p>
-		</a>
-	</div><!-- /.box-mainVisualInr -->
+	新しい記事はありません。
 <?php endif; ?>
 </div><!-- /.box-mainVisual -->
-
-<p class="ttl-sectionHead">column</p>
 
 <!-- その他の最新記事を取得 -->
 <?php
@@ -72,5 +63,7 @@
 	
 	<a class="btn-detail" href="/about/">詳細を見る</a>
 </div><!-- /.box-About -->
+
+</div><!-- /.box-content-home -->
 
 <?php get_footer(); ?>
