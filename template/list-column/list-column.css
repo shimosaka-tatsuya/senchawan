@@ -1,6 +1,6 @@
 /* PC View */
 .list-column {
-	width: calc(100% - 128px);
+	width: 100%;
 	max-width: 1200px;
 	min-width: 980px;
 	margin: 0 auto;
