@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-<!-- 最新記事3件を取得 -->
+<!-- 最新記事1件を取得 -->
 <?php
   $args = array(
     'post_type' => 'post',
-    'posts_per_page' => 3
+    'posts_per_page' => 1
   );
   $st_query = new WP_Query( $args );
 ?>
@@ -37,16 +37,6 @@
 <?php endif; ?>
 </div><!-- /.box-mainVisual -->
 
-<div class="box-about">
-	<dl class="data-about">
-		<dt class="ttl-About">About</dt>
-		<dd class="txt-about txt-about-english">I will input the ABOUT from here.I will input the ABOUT from here.I will input the ABOUT from here.</dd>
-		<dd class="txt-about txt-about-japanese">テキスト入りますテキスト入りますテキスト入りますテキスト入ります</dd>
-	</dl><!-- /.data-about -->
-	
-	<a class="btn-detail" href="/about/">詳細を見る</a>
-</div><!-- /.box-About -->
-
 <p class="ttl-sectionHead">column</p>
 
 <!-- その他の最新記事を取得 -->
@@ -54,7 +44,7 @@
   $args = array(
     'post_type' => 'post',
     'posts_per_page' => 6,
-    'offset' => 3 //1〜3件目の記事は表示しない。
+    'offset' => 1 //〜1件目の記事は表示しない。
   );
   $st_query = new WP_Query( $args );
 ?>
@@ -73,9 +63,14 @@
 
 <a class="btn-detail" href="/column/">コラムをもっと見る</a>
 
-<p class="ttl-sectionHead">instagram</p>
-
-<ul id="instafeed" class="list-instagram"></ul>
-<p class="btn-instagramMore">インスタグラムをもっとみる</p>
+<div class="box-about">
+	<dl class="data-about">
+		<dt class="ttl-About">About</dt>
+		<dd class="txt-about txt-about-english">I will input the ABOUT from here.I will input the ABOUT from here.I will input the ABOUT from here.</dd>
+		<dd class="txt-about txt-about-japanese">テキスト入りますテキスト入りますテキスト入りますテキスト入ります</dd>
+	</dl><!-- /.data-about -->
+	
+	<a class="btn-detail" href="/about/">詳細を見る</a>
+</div><!-- /.box-About -->
 
 <?php get_footer(); ?>
