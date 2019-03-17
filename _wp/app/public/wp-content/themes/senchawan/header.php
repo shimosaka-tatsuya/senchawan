@@ -69,53 +69,77 @@
 	wp_head();
 ?>
 </head>
-<body>
-
+<?php // ▼bodyタグ ?>
+<?php if (is_home() && !is_paged()) { // トップページ ?>
+<body class="area-home">
+<?php } else if(is_page( '453' )) { // アバウト ?>
+<body class="area-about">
+<?php } else if(is_page( '2' ) or is_archive()) { // コラム一覧 ?>
+<body class="area-archive">
+<?php } else if( is_single() ) { // 記事ページ ?>
+<body class="area-column-detail">
+<?php } ?>
 <header class="box-header">
-	<a class="box-siteLogo" href="/">ロゴ</a><!-- /.box-siteLogo -->
+	<div class="box-siteSymbol">
+		<a class="box-siteLogo" href="#"><img src="/img/common/img-logoQ.png" alt="陶芸作家見習いであるテオドール・ボワイエが運営するWEBメディア『q』のロゴ" width="100%" height="" /></a><!-- /.box-siteLogo -->
+		
+		<p class="txt-outLineSite txt-fontAlphabet">I have questions about Kutani.<br>
+			Dummy I have questions about Kutani.<br>
+			I have questions about Kutani.<br>
+			Dummy I have questions about Kutani.</p><!-- /.txt-outLineSite -->
+	</div><!-- /.box-siteSymbol -->
 	
 	<input id="hamburgerMenuInput" type="checkbox">
-	
-	<label class="btn-hamburgerMenu" for="hamburgerMenuInput"><span>メニュー</span></label>
-	
-	<nav class="box-hamburgerMenu">
 		
-		<ul class="list-hamburgerMenu">
-			<li class="btn-hamburgerMenu <?php if (is_home() && !is_paged()) { ?> btn-hamburgerMenu-current<?php } ?>">
-				<a class="btn-hamburgerMenuInr" href="/">トップ</a><!-- /.btn-hamburgerMenuInr -->
-			</li><!-- /.btn-hamburgerMenu -->
-			
-			<li class="btn-hamburgerMenu<?php if(is_page( '453' )): ?> btn-btn-hamburgerMenu-current<?php endif; ?>">
-				<a class="btn-hamburgerMenuInr" href="/about/">アバウト</a><!-- /.btn-hamburgerMenuInr -->
-			</li><!-- /.btn-hamburgerMenu -->
-			
-			<li class="box-hamburgerMenuColumn">
-				<p class="ttl-hamburgerMenuColumn">コラム</p><!-- /.ttl-hamburgerMenuColumn -->
-				<ul class="list-hamburgerMenuColumn">
-					<li class="btn-hamburgerMenuColumn<?php if(is_page( '2' )): ?> btn-hamburgerMenuColumn-current<?php endif; ?>">
-						<a class="btn-hamburgerMenuColumnInr" href="/column/">全コラム一覧</a><!-- /.btn-hamburgerMenuColumnInr -->
-					</li><!-- /.btn-hamburgerMenuColumn -->
-					
-					<li class="btn-hamburgerMenuColumn<?php if(is_category( 'culture' )): ?> btn-hamburgerMenuColumn-current<?php endif; ?>">
-						<a class="btn-hamburgerMenuColumnInr" href="/category/culture/">カルチャー</a><!-- /.btn-hamburgerMenuColumnInr -->
-					</li><!-- /.btn-hamburgerMenuColumn -->
-					
-					<li class="btn-hamburgerMenuColumn<?php if(is_category( 'news' )): ?> btn-hamburgerMenuColumn-current<?php endif; ?>">
-						<a class="btn-hamburgerMenuColumnInr" href="/category/news/">ニュース</a><!-- /.btn-hamburgerMenuColumnInr -->
-					</li><!-- /.btn-hamburgerMenuColumn -->
-					
-					<li class="btn-hamburgerMenuColumn<?php if(is_category( 'product' )): ?> btn-hamburgerMenuColumn-current<?php endif; ?>">
-						<a class="btn-hamburgerMenuColumnInr" href="/category/product/">プロダクト</a><!-- /.btn-hamburgerMenuColumnInr -->
-					</li><!-- /.btn-hamburgerMenuColumn -->
-				</ul><!-- /.list-hamburgerMenuColumn -->
-			</li><!-- /.box-hamburgerMenuColumn -->
-		</ul><!-- /.list-hamburgerMenu -->
+	<label class="btn-hamburgerMenu" for="hamburgerMenuInput"><span></span></label>
+	
+	<nav class="box-globalNavigation">
 		
-	</nav><!-- /.box-hamburgerMenu -->
-</header><!-- /.box-header -->
+		<a class="box-siteLogo-hamburger" href="/"><img src="/img/common/img-logoQ-white.png" alt="陶芸作家見習いであるテオドール・ボワイエが運営するWEBメディア『q』のロゴ" width="100%" height="" /></a><!-- /.box-siteLogo -->
+		
+		<div class="list-globalNavigation">
+			<div class="item-globalNavigation item-globalNavigation-home">
+				<a class="btn-globalNavigation txt-fontAlphabet" href="/">Home</a><!-- /.btn-globalNavigation -->
+			</div><!-- /.btn-globalNavigation -->
+			
+			<div class="item-globalNavigation item-globalNavigation-archive">
+				<a class="btn-globalNavigation txt-fontAlphabet" href="/column/">Archive</a><!-- /.btn-globalNavigation -->
+				
+				<ul class="list-globalNavigationArchive">
+					<div class="item-globalNavigationArchive">
+						<a class="btn-globalNavigationArchive txt-fontAlphabet" href="/category/culture/">culture</a><!-- /.btn-globalNavigationArchive -->
+					</div><!-- /.btn-globalNavigationArchive -->
+					
+					<div class="item-globalNavigationArchive">
+						<a class="btn-globalNavigationArchive txt-fontAlphabet" href="/category/news/">news</a><!-- /.btn-globalNavigationArchive -->
+					</div><!-- /.btn-globalNavigationArchive -->
+					
+					<div class="item-globalNavigationArchive">
+						<a class="btn-globalNavigationArchive txt-fontAlphabet" href="/category/product/">product</a><!-- /.btn-globalNavigationArchive -->
+					</div><!-- /.btn-globalNavigationArchive -->
+				</ul><!-- /.list-globalNavigationArchive -->
+			</div><!-- /.btn-globalNavigation -->
+			
+			<div class="item-globalNavigation item-globalNavigation-about">
+				<a class="btn-globalNavigation txt-fontAlphabet" href="/about/">About</a><!-- /.btn-globalNavigation -->
+			</div><!-- /.btn-globalNavigation -->
+			
+			<span class="ico-globalNavigation"></span><!-- /.ico-globalNavigation -->
+		</div><!-- /.list-globalNavigation -->
+		
+		<div class="box-headerMeta">
+			<dl class="data-headerMetaSns">
+				<dt class="ttl-headerMetaSns txt-fontAlphabet">Follow</dt>
+				<dd class="box-headerMetaSns">
+					<a class="ico-headerMetaSns" href="#" ><img src="/img/common/ico-headerMetaSns-instagram.png" alt="Instagramをフォローする" width="16" height="" /></a>
+					<a class="ico-headerMetaSns" href="#"><img src="/img/common/ico-headerMetaSns-facebook.png" alt="Facebookをフォローする" width="16" height="" /></a>
+				</dd><!-- /.data-headerMetaSns -->
+			</dl><!-- /.box-headerMetaSns -->
+			
+			<?php // <nav class="box-headerMetaNavigation"><a class="txt-headerMetaNavigation-policy txt-fontAlphabet" href="#">Privacy policy</a></nav> ?>
+			
+			<p class="txt-copyright txt-fontAlphabet">Copyright©<?php echo date("Y"); ?> q. All Rights Reserved.</p>
+		</div><!-- /.box-headerMeta -->
 
-<?php // パンくず。トップページ以外で読み込ませる。 ?>
-<?php if (!is_home()) { ?>
-<?php // パンくず ?>
-<?php get_template_part( 'template-parts/list-breadcrumb/list-breadcrumb', get_post_format() ); ?>
-<?php } ?>
+	</nav><!-- /.box-globalNavigation -->
+</header><!-- /.box-header -->
