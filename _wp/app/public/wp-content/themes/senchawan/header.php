@@ -63,8 +63,7 @@
 <meta property="og:type" content="article">
 <meta property="fb:app_id" content="サンプルID">
 <meta property="og:locale" content="ja_JP" />
-
-<?php
+<?php // wordpressのデフォルトの記述
 	wp_deregister_script( 'jquery' ); 
 	wp_head();
 ?>
