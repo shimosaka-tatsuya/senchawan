@@ -46,7 +46,7 @@
 	margin-right: 20px;
 }
 
-.txt-columnHeadMetaCategory a {
+.post-categories > li > a {
 	display: inline-block;
 	line-height: 20px;
 	color: #fff;
@@ -89,7 +89,7 @@
 		margin-right: 15px;
 	}
 	
-	.txt-columnHeadMetaCategory a {
+	.post-categories > li > a {
 		line-height: 16px;
 		font-size: 9px;
 		color: #fff;

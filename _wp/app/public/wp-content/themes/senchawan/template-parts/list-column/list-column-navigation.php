@@ -7,6 +7,8 @@
 	<div class="list-columnNavigation list-columnNavigation-news">
 	<?php } else if(is_category( 'product' )) { // product ?>
 	<div class="list-columnNavigation list-columnNavigation-product">
+	<?php } else { ?>
+	<div class="list-columnNavigation list-columnNavigation--tag">
 	<?php } ?>
 		<div class="btn-columnNavigation btn-columnNavigation-all txt-fontAlphabet">
 			<a href="/archive/">All</a>

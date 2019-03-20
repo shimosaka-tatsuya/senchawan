@@ -22,7 +22,6 @@ body {
 /* PC View */
 .box-header {
 	width: 100%;
-	min-width: 1366px;
 	margin: 0 auto;
 	padding: 56px 60px 62px;
 	box-sizing: border-box;
@@ -431,10 +430,13 @@ body {
 /* PC View */
 .box-footer {
 	width: 100%;
-	min-width: 1366px;
 	margin: 0 auto;
 	padding: 0 64px 50px;
     box-sizing: border-box;
+}
+
+.list-column+.box-footer {
+	margin-top: 146px;
 }
 
 .data-footerSns {
@@ -545,6 +547,10 @@ body {
 .box-footer {
 	min-width: unset;
     padding: 0 0 32px 0;
+}
+
+.list-column+.box-footer {
+	margin-top: 96px;
 }
 
 .data-footerSns {
