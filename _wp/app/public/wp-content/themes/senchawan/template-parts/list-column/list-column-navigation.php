@@ -2,7 +2,7 @@
 	<ul class="list-categoryNavigation">
 		
 		<li class="btn-categoryNavigation<?php if(is_page( '2' )): ?> btn-categoryNavigation-current<?php endif; ?>">
-			<a href="/column/">all</a>
+			<a href="/archive/">all</a>
 		</li>
 		
 		<li class="btn-categoryNavigation<?php if(is_category( 'culture' )): ?> btn-categoryNavigation-current<?php endif; ?>">

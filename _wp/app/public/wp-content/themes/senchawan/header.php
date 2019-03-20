@@ -10,7 +10,7 @@
 <?php } else if(is_page( '453' )) { // アバウト ?>
 <link rel="stylesheet" type="text/css" href="/css/about.min.css">
 <?php } else if(is_page( '2' ) or is_archive()) { // コラム一覧 ?>
-<link rel="stylesheet" type="text/css" href="/css/list-column.min.css">
+<link rel="stylesheet" type="text/css" href="/css/archive.min.css">
 <?php } else if( is_single() ) { // 記事ページ ?>
 <link rel="stylesheet" type="text/css" href="/css/column-detail.min.css">
 <?php } ?>
@@ -101,7 +101,7 @@
 			</div><!-- /.btn-globalNavigation -->
 			
 			<div class="item-globalNavigation item-globalNavigation-archive">
-				<a class="btn-globalNavigation txt-fontAlphabet" href="/column/">Archive</a><!-- /.btn-globalNavigation -->
+				<a class="btn-globalNavigation txt-fontAlphabet" href="/archive/">Archive</a><!-- /.btn-globalNavigation -->
 				
 				<ul class="list-globalNavigationArchive">
 					<div class="item-globalNavigationArchive">
