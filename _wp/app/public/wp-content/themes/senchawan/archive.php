@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<h1 class="ttl-listName"><?php single_tag_title( ); ?>の一覧</h1>
+<h1 class="ttl-pageHead"><?php single_tag_title( ); ?></h1><!-- /.ttl-pageHead -->
 
 <?php // コラム一覧のナビゲーション ?>
 <?php get_template_part( 'template-parts/list-column/list-column-navigation', get_post_format() ); ?>
