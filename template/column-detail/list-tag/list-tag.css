@@ -1,6 +1,7 @@
 /* PC View */
 .list-tag {
-	margin: 100px 0 160px;
+	width: 68%;
+	margin: 100px auto 160px;
 	line-height: 1.6;
 }
 
