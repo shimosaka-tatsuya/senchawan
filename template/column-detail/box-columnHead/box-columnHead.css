@@ -15,7 +15,7 @@
 .txt-columnHead {
 	display: block;
 	font-weight: 100;
-	line-height: 1;
+	line-height: 1.2;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -23,7 +23,7 @@
 
 .txt-columnHead-english {
 	font-size: 30px;
-	margin-bottom: 22px;
+	margin-bottom: 20px;
 }
 
 .txt-columnHead-japanese {
