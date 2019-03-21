@@ -2,6 +2,8 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
+<div class="box-content-column-detail">
+
 <?php // コラム上部 ?>
 <?php get_template_part( 'template-parts/column-detail/box-columnHead', get_post_format() ); ?>
 
@@ -20,9 +22,7 @@
 	} ?>
 </div><!-- /.box-shareButton -->
 
-<h2 class="ttl-pageHead">
-	関連記事
-</h2><!-- /.ttl-pageHead -->
+<h2 class="ttl-pageHead">recommend</h2><!-- /.ttl-pageHead -->
 
 <ul class="list-column">
 <?php
@@ -33,7 +33,7 @@ if ($categories) {
     $args = array(
         'category__in' => array($categories[0]), // カテゴリーのIDで記事を取得
         'post__not_in' => array($post->ID), // 表示している記事は除外する
-        'showposts'=>6, // 取得したい記事数
+        'showposts'=>3, // 取得したい記事数
         'caller_get_posts'=>1, // 取得した記事を1番目から表示する
         'orderby'=> 'rand' // ランダムで取得する
     ); 
@@ -50,7 +50,9 @@ while ($my_query->have_posts()) { $my_query->the_post();
 	<li class="box-otherColumn box-otherColumn-none">同一カテゴリのコラムはありません。</li><!-- /.box-otherColumn-none -->
 <?php } } ?>
 </ul><!-- /.list-otherColumn -->
-	
+
+</div><!-- box-content-column-detail -->
+
 <?php endwhile; ?>
 
 <?php get_footer(); ?>

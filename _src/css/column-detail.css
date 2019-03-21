@@ -1,6 +1,7 @@
 @import "./../../template/column-detail/box-columnHead/box-columnHead";
 @import "./../../template/column-detail/list-tag/list-tag";
 @import "./../../template/ttl-pageHead/ttl-pageHead";
+@import "./../../template/list-column/list-column";
 @import "./../../template/list-column/box-column/box-column";
 
 /* PC View */
@@ -9,6 +10,10 @@
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
+}
+
+.box-content-column-detail+.box-footer {
+	margin-top: 146px;
 }
 
 .img-columnMainThumbnail {
@@ -49,5 +54,9 @@
 	.box-columnMain p strong {
 		font-size: 15px;
 		margin-bottom: 0;
+	}
+
+	.box-content-column-detail+.box-footer {
+		margin-top: 96px;
 	}
 }

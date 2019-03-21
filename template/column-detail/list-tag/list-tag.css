@@ -1,6 +1,6 @@
 /* PC View */
 .list-tag {
-	margin: 100px 0 30px;
+	margin: 100px 0 160px;
 	line-height: 1.6;
 }
 
@@ -25,7 +25,7 @@
 
 	.list-tag {
 		width: calc(100% - 40px);
-		margin: 55px auto 0;
+		margin: 55px auto 120px;
 	}
 	
 	.item-tag {

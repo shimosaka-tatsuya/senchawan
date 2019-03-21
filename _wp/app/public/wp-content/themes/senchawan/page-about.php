@@ -2,50 +2,56 @@
 
 <?php get_header(); ?>
 
-<h1 class="img-mainVisual">
-	<img src="https://placehold.jp/1200x630.png" alt="アバウトの見出し" width="100%" height="" >
-</h1><!-- /.img-mainVisual -->
+<div class="box-content-about">
 
 
 
-<h2 class="ttl-pageHead">
-	concept
-</h2><!-- /.ttl-pageHead -->
+<h1 class="ttl-pageHead txt-fontAlphabet">
+	About
+</h1><!-- /.ttl-pageHead -->
 
-<p class="txt-conceptEnglish">I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
-	I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
-	I will input the CONCEPT from here.I will input the CONCEPT from here.</p><!-- /.txt-conceptEnglish -->
-
-
-
-<h2 class="ttl-pageHead">
-	コンセプト入ります
-</h2><!-- /.ttl-pageHead -->
-
-<p class="txt-conceptJapanese">テキスト入りますテキスト入ります<br>
-	テキスト入りますテキスト入りますテキスト入りますテキスト入ります<br>
-	テキスト入りますテキスト入りますテキスト入りますテキスト入ります<br>
-	テキスト入りますテキスト入ります</p><!-- /.txt-conceptJapanese -->
-
-<div class="box-profile">
-	<div class="txt-profile">
-		<h3 class="ttl-profile">profile</h3>
+	<div class="box-description">
+		<h2 class="ttl-description txt-fontAlphabet">What is “q”</h2>
 	
-		<p class="txt-profileCaptionEnglish">I will input the profile from here.<br>
-			I will input the profile from here.<br>
-			I will input the profile from here.</p><!-- /.txt-profileEnglish -->
+		<p class="txt-About txt-fontAlphabet">I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
+			I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
+			I will input the CONCEPT from here.I will input the CONCEPT from here.</p>
+			
+		<p class="txt-About">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+			テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+			テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p>
+	</div><!-- /.box-description -->
 		
-		<p class="txt-profileCaptionJapanese">テキスト入りますテキスト入ります<br>
-			テキスト入りますテキスト入りますテキスト入ります<br>
-			テキスト入りますテキスト入ります</p><!-- /.txt-profileJapanese -->
-	</div><!-- /.txt-profile -->
+	<div class="box-description">
+		<h2 class="ttl-description">What is “KUTANI”</h2>
 	
-	<img class="img-profile" src="https://placehold.jp/200x300.png" alt="アバウトの見出し" width="200" height="300" >
-	
-</div><!-- /.box-profile -->
+		<p class="txt-About txt-fontAlphabet">I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
+			I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
+			I will input the CONCEPT from here.I will input the CONCEPT from here.</p><!-- /.txt-About--English -->
+			
+		<p class="txt-About">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+			テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+			テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p><!-- /.txt-About--Japanese -->
+	</div><!-- /.box-description -->
 
+	<div class="box-writer">
+		<h2 class="ttl-description">What is “KUTANI”</h2>
+		
+		<div class="box-writerInfo">
+			<p class="txt-About txt-fontAlphabet">I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
+				I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
+				I will input the CONCEPT from here.I will input the CONCEPT from here.</p><!-- /.txt-About--English -->
+				
+			<p class="txt-About">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+				テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。<br>
+				テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p><!-- /.txt-About--Japanese -->
+		</div><!-- /.box-writerInfo -->
+		
+		<div class="img-writer">
+			<img src="https://placehold.jp/240x100.png" alt="" width="100%" height="">
+		</div>
+	</div><!-- /.box-writer -->
 
+</div><!-- /.box-content-about -->
 
-<a class="btn-detail" href="/">トップへ戻る</a>
-
-<?php get_footer();
+<?php get_footer(); ?>

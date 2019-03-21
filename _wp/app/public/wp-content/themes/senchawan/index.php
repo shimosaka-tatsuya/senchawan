@@ -53,7 +53,7 @@
 
 <div class="wp-columnDetail">
 	<div class="box-columnDetail">
-		<a class="btn-detail txt-fontAlphabet" href="/column/">More</a>
+		<a class="btn-detail txt-fontAlphabet" href="/archive/">More</a>
 	</div><!-- /.box-columnDetail -->
 </div><!-- /.wp-columnDetail -->
 

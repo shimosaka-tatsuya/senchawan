@@ -1,9 +1,18 @@
 <?php get_header(); ?>
 
-<h1 class="ttl-listName"><?php single_tag_title( ); ?>の一覧</h1>
+<?php if (is_page( '2' ) or is_category( 'culture' ) or is_category( 'news' ) or is_category( 'product' )) { // タグ一覧以外 ?>
+<h1 class="ttl-pageHead"><?php single_tag_title( ); ?></h1><!-- /.ttl-pageHead -->
+<?php } else { ?>
+<h1 class="ttl-pageHead">Archive</h1><!-- /.ttl-pageHead -->
+<?php } ?>
 
 <?php // コラム一覧のナビゲーション ?>
 <?php get_template_part( 'template-parts/list-column/list-column-navigation', get_post_format() ); ?>
+
+<?php // タグ名（タグ一覧のときだけ表示） ?>
+<?php if (!is_page( '2' ) and !is_category( 'culture' ) and !is_category( 'news' ) and !is_category( 'product' )) { // タグ一覧以外 ?>
+<?php single_tag_title( ); ?>
+<?php } ?>
 
 <?php // コラム一覧 ?>
 <?php if ( have_posts() ) : ?>

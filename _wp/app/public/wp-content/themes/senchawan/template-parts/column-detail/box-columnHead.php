@@ -1,11 +1,12 @@
 <div class="box-columnHead">
-	<h1 class="ttl-column">
-		<span class="ttl-columnInr-english"><?php the_field('ttlColumnEnglish'); ?></span>
-		<span class="ttl-columnInr-japanese"><?php the_title(); ?></span>
-	</h1>
+	<h1 class="ttl-columnHead">
+		<span class="txt-columnHead txt-columnHead-english"><?php the_field('ttlColumnEnglish'); ?></span>
+		<span class="txt-columnHead txt-columnHead-japanese"><?php the_title(); ?></span>
+	</h1><!-- /.ttl-columnHead -->
 	
-	<div class="box-meta">
-		<p class="txt-issueDate"><?php the_time('Y.m.d'); ?></p>
-		<?php the_category(); ?>
-	</div><!-- /.box-meta -->
+	<div class="box-columnHeadMeta">
+	
+		<p class="txt-columnHeadMetaDate"><?php the_time('d / m / Y'); ?></p>
+		<?php the_category(); ?>	
+	</div><!-- /.box-columnHeadMeta -->
 </div><!-- /.box-columnHead -->

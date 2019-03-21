@@ -139,6 +139,10 @@
 	animation-name: none;
 }
 
+.list-columnNavigation--tag .ico-columnNavigation {
+	display: none!important;
+}
+
 /* SP View */
 @media screen and (max-width:812px) {
 

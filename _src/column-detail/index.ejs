@@ -72,10 +72,24 @@ var cssFileName = ["column-detail"];
 	}) %>
 	</ul><!-- /.list-column -->
 
+	<% /* 各ページ／見出し */ %>
+	<%- include(setLayered + "ttl-pageHead/ttl-pageHead", {
+		ttlPageHead: "Recommend"
+	}) %>
+
+	<% /* コラム一覧 */ %>
+	<ul class="list-column">
+	<%- include(setLayered + "list-column/box-column/box-column", {
+		loopNum: 3
+	}) %>
+	</ul><!-- /.list-column -->
+
 </div><!-- box-content-<%- pageId  %> -->
 
 <% /* フッター */ %>
 <%- include(setLayered + "base/footer") %>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="/js/base.min.js"></script>
 </body>
 </html>

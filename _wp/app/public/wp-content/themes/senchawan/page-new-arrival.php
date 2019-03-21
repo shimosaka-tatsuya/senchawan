@@ -2,9 +2,7 @@
 
 <?php get_header(); ?>
 
-<h1 class="ttl-pageHead">
-	全column一覧
-</h1><!-- /.ttl-pageHead -->
+<h1 class="ttl-pageHead">Archive</h1><!-- /.ttl-pageHead -->
 
 <?php // コラム一覧のナビゲーション ?>
 <?php get_template_part( 'template-parts/list-column/list-column-navigation', get_post_format() ); ?>
