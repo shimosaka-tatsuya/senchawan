@@ -34,7 +34,7 @@
 <?php
   $args = array(
     'post_type' => 'post',
-    'posts_per_page' => 6,
+    'posts_per_page' => 3,
     'offset' => 1 //〜1件目の記事は表示しない。
   );
   $st_query = new WP_Query( $args );
