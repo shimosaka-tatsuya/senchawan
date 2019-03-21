@@ -576,6 +576,10 @@ remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'wp_shortlink_wp_head');
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
+add_action('wp_enqueue_scripts', function() {
+    wp_deregister_style('wp-block-library');
+});
+remove_action('wp_head', 'rel_canonical');
 
 add_filter( 'wp_resource_hints', 'remove_dns_prefetch', 10, 2 );
 function remove_dns_prefetch( $hints, $relation_type ) {

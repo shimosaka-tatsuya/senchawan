@@ -6,20 +6,14 @@
     <meta name="description" content="<%= meta.description %>">
     
     <%# ogタグ %>
-    <meta property="og:url" content="https://www.shimo.space<%= meta.ogUrl %>" />
     <meta property="og:title" content="<%= meta.ogTitle %>" />
-
     <% if( pageId !== "top" ) { %>
     <meta property="og:type" content="article">
     <% } else { %>
     <meta property="og:type" content="website">
     <% }; %>
-
-    <meta property="og:description" content="<%= meta.ogDescription %>" />
-    <meta property="og:image" content="<%= meta.ogImage %>" />
-    <meta property="og:site_name" content="サンプルサイトネーム" />
-    <meta property="fb:app_id" content="サンプルID">
-    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:image" content="<%= meta.ogImage %>" />   
+    <meta property="og:url" content="https://www.shimo.space<%= meta.ogUrl %>" />
 
     <%# ファビコン %>
     <link rel="icon" href="ファビコンのサンプル" sizes="16x16" type="image/png">

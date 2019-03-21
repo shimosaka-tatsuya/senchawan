@@ -27,12 +27,6 @@
 <?php } else if( is_single() ) { // 記事ページ ?>
 <meta name="description" content="ダミーダミー記事のディスクリプション。">
 <?php } ?>
-<?php // ▼og:url ?>
-<?php if (is_home() && !is_paged()) { // トップページ ?>
-<meta property="og:url" content="<?php echo home_url( '/' ); ?>" />
-<?php } else if (!is_home()) { // トップページ以外 ?>
-<meta property="og:url" content="<?php echo the_permalink(); ?>" />
-<?php } ?>
 <?php // ▼og:title  ?>
 <?php if (is_home() && !is_paged()) { // トップページ ?>
 <meta property="og:title" content="q" />
@@ -43,15 +37,11 @@
 <?php } else if( is_single() ) { // 記事ページ ?>
 <meta property="og:title" content=" <?php the_title(); ?> | q" />
 <?php } ?>
-<?php // ▼og:description  ?>
+<?php // ▼og:type  ?>
 <?php if (is_home() && !is_paged()) { // トップページ ?>
-<meta property="og:description" content="トップのOGディスクリプション" />
-<?php } else if(is_page( '453' )) { // アバウトページ ?>
-<meta property="og:description" content="アバウトのOGディスクリプション" />
-<?php } else if(is_page( '2' ) or is_archive()) { // コラム一覧ページ ?>
-<meta property="og:description" content="コラム一覧のOGディスクリプション" />
-<?php } else if( is_single() ) { // 記事ページ ?>
-<meta property="og:description" content="記事のOGディスクリプション" />
+<meta property="og:type" content="website">
+<?php } else { // トップページ以外 ?>
+<meta property="og:type" content="article">
 <?php } ?>
 <?php // ▼og:image  ?>
 <?php if (is_home() && !is_paged()) { // トップページ ?>
@@ -61,10 +51,12 @@
 <?php } else if( is_single() ) { // 記事ページ ?>
 <meta property="og:image" content="<?php $eye_img = wp_get_attachment_image_src( get_post_thumbnail_id() , 'full' ); print_r($eye_img[0]); ?>" />
 <?php } ?>
-<meta property="og:site_name" content="q" />
-<meta property="og:type" content="article">
-<meta property="fb:app_id" content="サンプルID">
-<meta property="og:locale" content="ja_JP" />
+<?php // ▼og:url ?>
+<?php if (is_home() && !is_paged()) { // トップページ ?>
+<meta property="og:url" content="<?php echo home_url( '/' ); ?>" />
+<?php } else if (!is_home()) { // トップページ以外 ?>
+<meta property="og:url" content="<?php echo the_permalink(); ?>" />
+<?php } ?>
 <link rel="stylesheet" type="text/css" href="/css/base.min.css">
 </head>
 <?php // ▼bodyタグ ?>

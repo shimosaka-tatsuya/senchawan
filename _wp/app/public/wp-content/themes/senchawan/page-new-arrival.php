@@ -27,7 +27,7 @@ $the_query = new WP_Query($args);
 </ul><!-- /.list-column -->
 
 <?php // ページネーション（archive.phpとは形式が違うので注意） ?>
-<nav class="navigation pagination" role="navigation">
+<nav class="navigation pagination">
 	<div class="nav-links">
 		<?php $paged = (int) get_query_var('paged'); ?>
 		<?php $the_query = new WP_Query($args);?>
