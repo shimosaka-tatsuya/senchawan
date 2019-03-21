@@ -2,7 +2,7 @@
 
 <div class="box-content-home">
 
-<!-- 最新記事1件を取得 -->
+<?php // 最新記事1件を取得 ?>
 <?php
   $args = array(
     'post_type' => 'post',
@@ -21,7 +21,7 @@
 			<p class="txt-mainVisualCategory txt-fontAlphabet"><?php echo get_cat_name(get_the_category()[0]->term_id); ?></p>
 			<p class="ttl-mainVisual-english txt-fontAlphabet"><?php the_field('ttlColumnEnglish'); ?></p>
 			<p class="ttl-mainVisual-japanese"><?php the_title(); ?></p>
-			<p class="txt-mainVisualDate"><?php the_time('Y.m.d'); ?></p>
+			<p class="txt-mainVisualDate"><?php the_time('d / m / Y'); ?></p>
 		</div>
 	</a>
 	<?php endwhile; ?>
@@ -30,7 +30,7 @@
 <?php endif; ?>
 </div><!-- /.box-mainVisual -->
 
-<!-- その他の最新記事を取得 -->
+<?php // その他の最新記事を取得 ?>
 <?php
   $args = array(
     'post_type' => 'post',

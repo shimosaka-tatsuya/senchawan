@@ -6,9 +6,7 @@
 
 
 
-<h1 class="ttl-pageHead txt-fontAlphabet">
-	About
-</h1><!-- /.ttl-pageHead -->
+<h1 class="ttl-pageHead txt-fontAlphabet">About</h1><!-- /.ttl-pageHead -->
 
 	<div class="box-description">
 		<h2 class="ttl-description txt-fontAlphabet">What is “q”</h2>
@@ -23,7 +21,7 @@
 	</div><!-- /.box-description -->
 		
 	<div class="box-description">
-		<h2 class="ttl-description">What is “KUTANI”</h2>
+		<h2 class="ttl-description txt-fontAlphabet">What is “KUTANI”</h2>
 	
 		<p class="txt-About txt-fontAlphabet">I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
 			I will input the CONCEPT from here.I will input the CONCEPT from here.<br>
@@ -35,7 +33,7 @@
 	</div><!-- /.box-description -->
 
 	<div class="box-writer">
-		<h2 class="ttl-description">What is “KUTANI”</h2>
+		<h2 class="ttl-description txt-fontAlphabet">What is “KUTANI”</h2>
 		
 		<div class="box-writerInfo">
 			<p class="txt-About txt-fontAlphabet">I will input the CONCEPT from here.I will input the CONCEPT from here.<br>

@@ -14,11 +14,11 @@
 <?php get_template_part( 'template-parts/column-detail/list-tag', get_post_format() ); ?>
 
 <div class="box-shareButton">
-	<span>SHARE ON</span>
+	<span>Share it!</span>
 	<?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { 
-	    ADDTOANY_SHARE_SAVE_KIT( array( 
-	        'buttons' => array( 'facebook' ),
-	    ) );
+		ADDTOANY_SHARE_SAVE_KIT( array( 
+			'buttons' => array( 'facebook', 'twitter' ),
+		) );
 	} ?>
 </div><!-- /.box-shareButton -->
 
