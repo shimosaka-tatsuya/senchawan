@@ -21,8 +21,8 @@
 }
 
 .box-columnMain p strong {
-	font-size: 20px;
-	font-weight: 100;
+	font-size: 22px;
+	font-weight: 500;
 	line-height: 1.5;
 	display: inline-block;
 }
@@ -52,7 +52,7 @@
 	}
 	
 	.box-columnMain p strong {
-		font-size: 15px;
+		font-size: 20px;
 		margin-bottom: 0;
 	}
 

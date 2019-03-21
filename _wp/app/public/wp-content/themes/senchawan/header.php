@@ -45,9 +45,9 @@
 <?php } ?>
 <?php // ▼og:image  ?>
 <?php if (is_home() && !is_paged()) { // トップページ ?>
-<meta property="og:image" content="トップのOGイメージ" />
+<meta property="og:image" content="デフォルトのOGイメージ" />
 <?php } else if(is_page( '453' ) or is_page( '2' ) or is_archive()) { // アバウト or アーカイブ ?>
-<meta property="og:image" content="その他のOGイメージ" />
+<meta property="og:image" content="デフォルトのOGイメージ" />
 <?php } else if( is_single() ) { // 記事ページ ?>
 <meta property="og:image" content="<?php $eye_img = wp_get_attachment_image_src( get_post_thumbnail_id() , 'full' ); print_r($eye_img[0]); ?>" />
 <?php } ?>

@@ -82,7 +82,7 @@
 }
 
 .ttl-column {
-	line-height: 1;
+	line-height: 1.2;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -90,7 +90,7 @@
 }
 
 .ttl-column-english {
-	margin-bottom: 15px;
+	margin-bottom: 12px;
 	font-size: 20px;
 }
 
