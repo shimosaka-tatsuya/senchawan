@@ -1,10 +1,14 @@
 /* PC View */
 .item-column {
 	width: calc((100% / 3) - 50px);
-	margin-top: 60px;
+	margin: 60px 0 0 75px;
 	
 	&:nth-child(-n+3) {
 		margin-top: 0;
+	}
+	
+	&:nth-child(3n - 2) {
+		margin-left: 0;
 	}
 }
 
@@ -126,7 +130,7 @@
 
 .item-column {
 	width: 100%;
-	margin-top: 50px;
+	margin: 50px 0 0 0;
 	
 	&:nth-child(1) {
 		margin-top: 0;
