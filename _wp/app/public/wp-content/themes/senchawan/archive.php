@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
 <?php if (is_page( '2' ) or is_category( 'culture' ) or is_category( 'news' ) or is_category( 'product' )) { // タグ一覧以外 ?>
-<h1 class="ttl-pageHead"><?php single_tag_title( ); ?></h1><!-- /.ttl-pageHead -->
+<h1 class="ttl-pageHead txt-fontAlphabet"><?php single_tag_title( ); ?></h1><!-- /.ttl-pageHead -->
 <?php } else { ?>
-<h1 class="ttl-pageHead">Archive</h1><!-- /.ttl-pageHead -->
+<h1 class="ttl-pageHead txt-fontAlphabet">Archive</h1><!-- /.ttl-pageHead -->
 <?php } ?>
 
 <?php // コラム一覧のナビゲーション ?>
