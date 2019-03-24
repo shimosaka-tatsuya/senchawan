@@ -11,7 +11,7 @@
 
 <?php // タグ名（タグ一覧のときだけ表示） ?>
 <?php if (!is_page( '2' ) and !is_category( 'culture' ) and !is_category( 'news' ) and !is_category( 'product' )) { // タグ一覧以外 ?>
-<?php single_tag_title( ); ?>
+<p class="txt-tagName"><?php single_tag_title( ); ?></p>
 <?php } ?>
 
 <?php // コラム一覧 ?>
