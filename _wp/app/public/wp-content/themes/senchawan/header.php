@@ -97,15 +97,15 @@
 				
 				<ul class="list-globalNavigationArchive">
 					<div class="item-globalNavigationArchive">
-						<a class="btn-globalNavigationArchive txt-fontAlphabet" href="/category/culture/">culture</a><!-- /.btn-globalNavigationArchive -->
+						<a class="btn-globalNavigationArchive txt-fontAlphabet" href="/category/culture/">Culture</a><!-- /.btn-globalNavigationArchive -->
 					</div><!-- /.btn-globalNavigationArchive -->
 					
 					<div class="item-globalNavigationArchive">
-						<a class="btn-globalNavigationArchive txt-fontAlphabet" href="/category/news/">news</a><!-- /.btn-globalNavigationArchive -->
+						<a class="btn-globalNavigationArchive txt-fontAlphabet" href="/category/news/">News</a><!-- /.btn-globalNavigationArchive -->
 					</div><!-- /.btn-globalNavigationArchive -->
 					
 					<div class="item-globalNavigationArchive">
-						<a class="btn-globalNavigationArchive txt-fontAlphabet" href="/category/product/">product</a><!-- /.btn-globalNavigationArchive -->
+						<a class="btn-globalNavigationArchive txt-fontAlphabet" href="/category/product/">Product</a><!-- /.btn-globalNavigationArchive -->
 					</div><!-- /.btn-globalNavigationArchive -->
 				</ul><!-- /.list-globalNavigationArchive -->
 			</div><!-- /.btn-globalNavigation -->

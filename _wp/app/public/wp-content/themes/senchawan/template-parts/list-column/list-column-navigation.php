@@ -15,15 +15,15 @@
 		</div>
 		
 		<div class="btn-columnNavigation btn-columnNavigation-culture txt-fontAlphabet">
-			<a href="/category/culture/">culture</a>
+			<a href="/category/culture/">Culture</a>
 		</div>
 		
 		<div class="btn-columnNavigation btn-columnNavigation-news txt-fontAlphabet">
-			<a href="/category/news/">news</a>
+			<a href="/category/news/">News</a>
 		</div>
 		
 		<div class="btn-columnNavigation btn-columnNavigation-product txt-fontAlphabet">
-			<a href="/category/product/">product</a>
+			<a href="/category/product/">Product</a>
 		</div>
 		
 		<span class="ico-columnNavigation"></span>
